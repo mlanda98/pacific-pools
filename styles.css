@@ -39,8 +39,6 @@ body {
   white-space: nowrap;  
 }
 
-
-
 .nav-links {
   list-style: none;
   display: flex;
@@ -87,7 +85,7 @@ body {
   left:0;
   width:100%;
   height:100%;
-  background: rgba(0,0,0,0.3); /* dark overlay for text readability */
+  background: rgba(0,0,0,0.3);
 }
 
 .hero-content {
@@ -118,36 +116,62 @@ body {
 .services {
   padding: 60px 40px;
   text-align: center;
+  color:#003b6f;
 }
 
 .services-grid {
   margin-top: 30px;
   display: flex;
-  gap: 25px;
+  gap: 30px;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .service-card {
   background: white;
-  border-radius: 8px;
+  border-radius: 12px;
   width: 320px;
-  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
 }
 
+/* Image sizing consistent */
 .service-card img {
   width: 100%;
-  border-radius: 8px 8px 0 0;
+  height: 220px;
+  object-fit: cover;
 }
 
-.service-card h3 {
-  margin: 20px 0 10px;
+/* Text container with padding */
+.service-card-content {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  flex: 1;
 }
 
-.service-card a {
+.service-card-content h3 {
+  margin: 0;
+  font-size: 22px;
+  color:#003b6f;
+}
+
+.service-card-content p {
+  flex: 1;
+  line-height: 1.5;
+  font-size: 16px;
+  color: #333;
+}
+
+.service-card-content a {
   color: #003b6f;
-  text-decoration: none;
   font-weight: bold;
+  text-decoration: none;
+  font-size: 16px;
+  margin-top: auto;
 }
 
 /* CTA BANNER */
