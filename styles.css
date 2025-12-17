@@ -208,6 +208,51 @@ body {
   color: #003b6f;
   margin-bottom: 20px;
 }
+.areas-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.areas-list li a {
+  display: block;
+  padding: 14px 20px;
+  background: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #003b6f;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service-areas {
+  background: #f7f9fb;
+  padding: 80px 20px;
+}
+
+.service-areas-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.service-areas h2 {
+  font-size: 36px;
+  color: #003b6f;
+  margin-bottom: 16px;
+}
+
+.service-areas p {
+  font-size: 18px;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
 
 .about-preview p {
   font-size: 18px;
