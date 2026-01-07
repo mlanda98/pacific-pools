@@ -117,7 +117,6 @@ body {
   text-align: center;
   color:#003b6f;
 }
-
 .services-grid {
   margin-top: 30px;
   display: flex;
@@ -136,6 +135,10 @@ body {
   overflow: hidden;
 }
 
+.services h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
 /* Image sizing consistent */
 .service-card img {
   width: 100%;
