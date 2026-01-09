@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f7f7f7;
+  color: #222;
+}
+
+/* NAVBAR */
+.navbar {
+  background: white;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 80px;
+  width: auto;
+}
+
+.logo-text {
+  font-family: "Anton", sans-serif;
+  font-size: 40px;
+  color: #003b6f;
+  white-space: nowrap;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #003b6f;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.nav-links a.quote-btn {
+  display: inline-block;
+  padding: 8px 14px;
+  background: #003b6f;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  border-radius: 5px;
+}
+
+/* ================================
+   SERVICES – GLOBAL STYLES
+================================ */
+.service-hero {
+  padding: 90px 40px 60px;
+  background: #f5f7fa;
+  text-align: center;
+}
+
+.service-hero h1 {
+  font-size: 42px;
+  color: #003b6f;
+  margin-bottom: 10px;
+}
+
+.service-hero p {
+  font-size: 20px;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ================================
+   SERVICE CONTENT
+================================ */
+.service-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 50px 40px;
+}
+
+.service-content p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 25px;
+}
+.service-hero img {
+  width: 800px;
+  height: 400px;
+  object-fit: cover;
+  padding-top: 10px;
+}
+/* ================================
+   SERVICE LIST
+================================ */
+.service-list {
+  margin-top: 30px;
+  padding-left: 0;
+  list-style: none;
+}
+
+.service-list li {
+  font-size: 17px;
+  padding-left: 28px;
+  margin-bottom: 14px;
+  position: relative;
+  color: #333;
+}
+
+.service-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #003b6f;
+  font-weight: bold;
+}
+
+/* ================================
+   SHARED NAV & FOOTER OVERRIDES
+   (only if needed for services)
+================================ */
+.nav {
+  border-bottom: 1px solid #eee;
+}
+.cta-banner {
+  background: #f7f7f7;
+  color: #003b6f;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.cta-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 20px;
+  background: #003b6f;
+  color: white;
+  border-radius: 6px;
+  font-weight: bold;
+}
+footer {
+  background: #003b6f;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
