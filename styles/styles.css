@@ -7,7 +7,6 @@
 }
 
 body {
-  background: #f7f7f7;
   color: #222;
 }
 
@@ -18,10 +17,10 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-.logo{
+.logo {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -33,10 +32,10 @@ body {
 }
 
 .logo-text {
-  font-family: 'Anton', sans-serif;
-  font-size: 40px;       
-  color: #003b6f;       
-  white-space: nowrap;  
+  font-family: "Anton", sans-serif;
+  font-size: 40px;
+  color: #003b6f;
+  white-space: nowrap;
 }
 
 .nav-links {
@@ -79,12 +78,12 @@ body {
 }
 
 .hero::after {
-  content: '';
+  content: "";
   position: absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .hero-content {
@@ -115,7 +114,12 @@ body {
 .services {
   padding: 60px 40px;
   text-align: center;
-  color:#003b6f;
+  color: #003b6f;
+  background-color: #f9f9f9;
+}
+
+.services p {
+  color: black;
 }
 .services-grid {
   margin-top: 30px;
@@ -131,7 +135,7 @@ body {
   width: 320px;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
 
@@ -142,8 +146,8 @@ body {
 
 .service-card img {
   width: 100%;
-  height: 200px;        
-  object-fit: cover;   
+  height: 200px;
+  object-fit: cover;
 }
 
 .service-card-content {
@@ -157,7 +161,7 @@ body {
 .service-card-content h3 {
   margin: 0;
   font-size: 22px;
-  color:#003b6f;
+  color: #003b6f;
 }
 
 .service-card-content p {
@@ -177,8 +181,8 @@ body {
 
 /* CTA BANNER */
 .cta-banner {
-  background:#f7f7f7;
-  color:#003b6f;
+  background: #ffff;
+  color: #003b6f;
   padding: 50px 20px;
   text-align: center;
 }
@@ -187,14 +191,13 @@ body {
   display: inline-block;
   margin-top: 15px;
   padding: 12px 20px;
-  background:#003b6f;
+  background: #003b6f;
   color: white;
   border-radius: 6px;
   font-weight: bold;
 }
 /* ABOUT PREVIEW SECTION */
 .about-preview {
-
   padding: 60px 40px;
   text-align: center;
 }
@@ -221,17 +224,19 @@ body {
 .areas-list li a {
   display: block;
   padding: 14px 20px;
-  background: #f7f7f7;
+  background: #ffffff;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
   color: #003b6f;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .service-areas {
-  background: #ffffff;
+  background: #f9f9f9;
   padding: 80px 20px;
 }
 
@@ -287,7 +292,7 @@ body {
   background: #f7f7f7;
   padding: 30px 25px;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
 .why-card h3 {
@@ -322,9 +327,65 @@ body {
 
 /* FOOTER */
 footer {
-  background:#003b6f;
+  background: #003b6f;
   color: white;
   text-align: center;
   padding: 20px;
   margin-top: 40px;
+}
+/* WHY CHOOSE US ICONS */
+.why-choose-us-icons {
+  padding: 80px 20px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.why-choose-us-icons h2 {
+  font-size: 2.4rem;
+  margin-bottom: 70px;
+  color: #0a3d62;
+}
+
+/* ICON GRID */
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 40px;
+  max-width: 1900px;
+  margin: 0 auto 70px;
+}
+
+/* ICON CARD */
+.icon-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon-card i {
+  font-size: 3rem;
+  color: #0a3d62; /* adjust to brand color */
+  margin-bottom: 15px;
+}
+
+.icon-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* CTA BUTTON */
+.primary-btn {
+  display: inline-block;
+  padding: 14px 34px;
+  background-color: #0a3d62;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.primary-btn:hover {
+  background-color: #062c47;
 }
