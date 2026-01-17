@@ -238,10 +238,11 @@ body {
 .service-areas {
   background: #f9f9f9;
   padding: 80px 20px;
+  text-align: center;
 }
 
 .service-areas-container {
-  max-width: 1100px;
+  max-width: 900px;
   margin: 0 auto;
   text-align: center;
 }
@@ -255,9 +256,23 @@ body {
 .service-areas p {
   font-size: 18px;
   color: #555;
-  max-width: 700px;
-  margin: 0 auto 40px;
+  margin-bottom: 30px;
   line-height: 1.6;
+}
+
+.areas-btn {
+  display: inline-block;
+  padding: 14px 26px;
+  background: #003b6f;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 18px;
+} 
+
+.areas-btn:hover {
+  background: #002a4a;
 }
 /* WHY CHOOSE US */
 .why-choose-us {
@@ -346,6 +361,20 @@ footer {
   color: #0a3d62;
 }
 
+.primary-btn{
+  display: inline-block;
+  padding: 14px 34px;
+  background-color: #003b6f;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.primary-btn:hover {
+  background-color: #062c47;
+} 
 /* ICON GRID */
 .icon-grid {
   display: grid;
@@ -375,10 +404,10 @@ footer {
 }
 
 /* CTA BUTTON */
-.primary-btn {
+.cta-btn {
   display: inline-block;
   padding: 14px 34px;
-  background-color: #0a3d62;
+  background-color: #003b6f;
   color: #fff;
   font-weight: 600;
   text-decoration: none;
@@ -386,6 +415,6 @@ footer {
   transition: background 0.3s ease;
 }
 
-.primary-btn:hover {
+.cta-banner .cta-btn:hover {
   background-color: #062c47;
 }

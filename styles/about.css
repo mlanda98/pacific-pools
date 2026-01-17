@@ -186,6 +186,7 @@ body {
 .process-card h3 {
   margin-bottom: 10px;
   font-size: 1.2rem;
+  color: #003b6f;
 }
 
 .process-card p {
@@ -242,6 +243,11 @@ footer {
   margin-bottom: 10px;
 }
 
+i {
+  font-size: 36px;
+  color: #0a3d62;
+  margin-bottom: 15px;
+}
 .value-card p {
   font-size: 16px;
   line-height: 1.6;
@@ -259,6 +265,7 @@ footer {
   display: inline-block;
   margin-top: 15px;
   padding: 12px 20px;
+  text-decoration: none;
   background: #003b6f;
   color: white;
   border-radius: 6px;
