@@ -140,7 +140,7 @@ body {
 }
 /* CTA BANNER */
 .cta-banner {
-  background: #ffff;
+  background: #ffffff;
   color: #003b6f;
   padding: 50px 20px;
   text-align: center;
@@ -154,6 +154,10 @@ body {
   color: white;
   border-radius: 6px;
   font-weight: bold;
+  text-decoration: none;
+}
+.cta-btn:hover {
+  background: #002a4a;
 }
 
 /* FOOTER */
@@ -164,3 +168,108 @@ footer {
   padding: 20px;
   margin-top: 40px;
 } 
+
+.county-hero {
+  background: #003b6f;
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.county-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.county-hero i {
+  margin-right: 10px;
+}
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 60px 20px;
+  line-height: 1.6;
+  font-size: 18px;
+  
+  
+}
+
+.container h2 {
+  font-size: 32px;
+  color: #003b6f;
+  margin-bottom: 20px;
+}
+
+.county-about,
+.county-services {
+  background: #f7f7f7;
+}
+
+.county-cities {
+  background: #ffffff;
+}
+
+.city-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+}
+
+.city-grid a {
+  display: block;
+  padding: 15px;
+  background: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #0b2a3c;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.city-grid a:hover {
+  background: #003b6f;
+  color: white;
+}
+
+.service-list {
+  list-style: none;
+  padding: 0;
+}
+
+.service-list li {
+  padding: 10px 0;
+  font-weight: 500;
+}
+
+.city-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 110px;
+  list-style: none;
+  padding: 0;
+}
+
+.city-btn {
+  display: flex; 
+  align-items: center;       /* vertical centering */
+  justify-content: center;   /* horizontal centering */
+  gap: 10px;                  /* space between icon and text */
+  padding: 10px 40px;
+  background-color: #0077b6;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.city-btn:hover {
+  background-color: #005f87;
+}
+
+.city-btn i {
+  font-size: 1.2em; /* scales icon */
+  padding-right: 8px;
+}
