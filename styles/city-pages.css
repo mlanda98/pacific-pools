@@ -1,0 +1,229 @@
+/* ===========================
+   CITY SERVICE PAGES
+   Shared Styling
+=========================== */
+/* BASIC RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  color: #222;
+}
+
+/* NAVBAR */
+.navbar {
+  background: white;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 80px;
+  width: auto;
+}
+
+.logo-text {
+  font-family: "Anton", sans-serif;
+  font-size: 40px;
+  color: #003b6f;
+  white-space: nowrap;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #003b6f;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.nav-links a.quote-btn {
+  display: inline-block;
+  padding: 8px 14px;
+  background: #003b6f;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  border-radius: 5px;
+}
+
+/* HERO */
+.city-hero {
+  background: linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+              url("../images/pool-hero.jpg") center/cover no-repeat;
+  padding: 90px 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.city-hero h1 {
+  font-size: 2.6rem;
+  margin-bottom: 15px;
+}
+
+.city-hero p {
+  max-width: 720px;
+  margin: auto;
+  font-size: 1.1rem;
+}
+
+/* SECTIONS */
+.city-section {
+  padding: 70px 20px;
+}
+
+.city-container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.city-section h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #003e5c;
+}
+
+.city-section p {
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+
+/* SERVICES LIST */
+.city-services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+}
+
+.city-services li {
+  background: #eef3f7;
+  padding: 15px;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+/* NEIGHBORHOODS / AREAS */
+.city-neighborhoods {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+}
+
+.city-neighborhoods li {
+  background: #f8fafc;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.city-neighborhoods i {
+  color: #004b6f;
+}
+
+/* CTA */
+.city-cta {
+  background: #004b6f;
+  color: white;
+  text-align: center;
+  padding: 70px 20px;
+}
+
+.city-cta h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.city-cta a {
+  display: inline-block;
+  padding: 14px 36px;
+  background: white;
+  color: #004b6f;
+  font-weight: bold;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: transform .2s ease;
+}
+
+.city-cta a:hover {
+  transform: scale(1.05);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .city-hero h1 {
+    font-size: 2.1rem;
+  }
+
+  .city-section h2 {
+    font-size: 1.7rem;
+  }
+}
+/* CTA BANNER */
+.cta-banner {
+  background: white;
+  color: #003b6f;
+  padding: 50px 20px;
+  text-align: center;   
+}
+.cta-btn {
+  display: inline-block;
+  padding: 14px 34px;
+  background-color: #003b6f;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.cta-banner .cta-btn:hover {
+  background-color: #062c47;
+}
+
+/* FOOTER */
+footer {
+  background: #003b6f;
+  color: white;
+  text-align: center;
+  padding: 20px;    
+  margin-top: 40px;
+}
+
+.more-areas {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.more-areas summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: #004b6f;
+}
