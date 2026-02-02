@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Get a Quote | Pacific Edge Pools</title>
+    <meta
+      name="description"
+      content="Request a free quote from Pacific Edge Pools for pool remodeling, replastering, plastering, resurfacing, spa renovations, or tile and coping. Serving Central Valley and Northern California."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="quote.css" />
+
+    <link rel="stylesheet" href="/styles/quote.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <img src="images/logo.png" alt="pool remodeling project" />
+          <div class="logo-text">Pacific Edge Pools</div>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="service-areas.html">Services</a></li>
+          <li><a class="quote-btn" href="quote.html">Get a Quote</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="county-hero">
+      <h1><i class="fa-solid fa-pencil"></i> Request Your Free Quote</h1>
+      <p>
+        Fill out the form below and our experts will provide a personalized
+        estimate for your pool project.
+      </p>
+    </section>
+
+    <!-- SERVICES LIST -->
+    <section class="container">
+      <h2>Our Pool Services</h2>
+      <ul class="city-grid">
+        <li>
+          <a class="city-btn" href="services/remodeling.html"
+            ><i class="fa-solid fa-water"></i> Pool Remodeling</a
+          >
+        </li>
+        <li>
+          <a class="city-btn" href="services/plastering.html"
+            ><i class="fa-solid fa-droplet"></i> Pool Plastering</a
+          >
+        </li>
+        <li>
+          <a class="city-btn" href="services/resurfacing.html"
+            ><i class="fa-solid fa-layer-group"></i> Pool Resurfacing</a
+          >
+        </li>
+        <li>
+          <a class="city-btn" href="services/spa.html"
+            ><i class="fa-solid fa-spa"></i> Spa Remodeling</a
+          >
+        </li>
+        <li>
+          <a class="city-btn" href="services/tile-coping.html"
+            ><i class="fa-solid fa-border-all"></i> Tile & Coping</a
+          >
+        </li>
+      </ul>
+    </section>
+
+    <!-- SERVICE AREAS LINK -->
+    <section class="container">
+      <h2>We Serve Your Area</h2>
+      <div class="service-areas">
+        <p>
+          Pacific Edge Pools proudly serves Central Valley, Northern California,
+          and surrounding areas.
+        </p>
+        <a href="service-areas.html" class="cta-btn">View All Service Areas</a>
+      </div>
+    </section>
+
+    <!-- QUOTE FORM -->
+    <section class="container">
+      <h2>Request a Free Pool Quote</h2>
+
+      <form
+        class="quote-form"
+        action="https://formspree.io/f/xjgojyag"
+        method="POST"
+      >
+        <input type="text" name="name" placeholder="Full Name" required />
+
+        <input type="email" name="email" placeholder="Email Address" required />
+
+        <input type="tel" name="phone" placeholder="Phone Number" required />
+
+        <select name="service" required>
+          <option value="">Select a Service</option>
+          <option value="Pool Remodeling">Pool Remodeling</option>
+          <option value="Pool Resurfacing">Pool Resurfacing</option>
+          <option value="Pool Plastering">Pool Plastering</option>
+          <option value="Tile & Coping">Tile & Coping</option>
+          <option value="Spa Remodeling">Spa Remodeling</option>
+        </select>
+
+        <textarea
+          name="message"
+          placeholder="Tell us about your pool project..."
+          rows="5"
+          required
+        ></textarea>
+
+        <!-- Optional Formspree helpers -->
+        <input type="hidden" name="_redirect" value="thank-you.html" />
+        <button type="submit">
+          <i class="fa-solid fa-paper-plane"></i> Submit Request
+        </button>
+      </form>
+
+      <p class="form-fallback">
+        If you don’t hear back within 24 hours, please call us directly.
+      </p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>© 2026 Pacific Edge Pools. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
