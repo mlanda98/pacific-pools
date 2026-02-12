@@ -22,6 +22,8 @@ body {
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1000;
 }
 
 .logo {
@@ -31,8 +33,9 @@ body {
 }
 
 .logo img {
-  height: 80px;
+  height: 70px;
   width: auto;
+  max-height: 50px;
 }
 
 .logo-text {
@@ -47,6 +50,12 @@ body {
   display: flex;
   gap: 30px;
   align-items: center;
+}
+
+.nav-links li {
+  width: 100%;
+  text-align: center;
+  padding: 15px;
 }
 
 .nav-links a {
@@ -226,4 +235,153 @@ footer {
   cursor: pointer;
   font-weight: 600;
   color: #004b6f;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+/* TABLETS */
+@media (max-width: 992px) {
+  .navbar {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .logo-text {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    padding: 80px 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .hero-button {
+    font-size: 16px;
+    padding: 10px 16px;
+  }
+}
+@media (max-width: 768px) {
+  .services {
+    padding: 50px 20px;
+  }
+
+  .services-grid {
+    gap: 20px;
+  }
+
+  .service-card {
+    width: 100%;
+    max-width: 500px;
+  }
+}
+@media (max-width: 768px) {
+  .why-choose-us-icons h2 {
+    margin-bottom: 40px;
+    font-size: 28px;
+  }
+
+  .icon-grid {
+    gap: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-areas {
+    padding: 60px 20px;
+  }
+
+  .service-areas h2 {
+    font-size: 28px;
+  }
+
+  .service-areas p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 480px) {
+  .primary-btn,
+  .cta-btn,
+  .areas-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+/* HAMBURGER MENU */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  z-index: 1000;
+  margin-left: auto;
+}
+
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  background: #003b6f;
+  border-radius: 2px;
+  transition: 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .logo img{
+    margin-left: -40px;
+  }
+  .hamburger {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    background: white;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 40px 0;
+
+    /* HIDDEN BY DEFAULT */
+    display: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
 }

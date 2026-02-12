@@ -19,6 +19,12 @@
           <img src="images/logo.png" alt="Pacific Edge Pools logo" />
           <div class="logo-text">Pacific Edge Pools</div>
         </div>
+
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="services.html">Services</a></li>
@@ -41,7 +47,7 @@
       </p>
 
       <p>If your project is urgent, feel free to call us directly.</p>
-      
+
       <div style="text-align: center; margin-top: 30px">
         <a href="index.html" class="cta-btn">
           <i class="fa-solid fa-house"></i> Return to Home
@@ -55,5 +61,16 @@
     <footer>
       <p>© 2026 Pacific Edge Pools. All rights reserved.</p>
     </footer>
+
+    <script>
+      const hamburger = document.getElementById('hamburger');
+      const navLinks = document.querySelector('.nav-links');
+
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('active');
+        });
+        
+    </script>
   </body>
 </html>

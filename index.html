@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" href="/styles/styles.css" />
   </head>
+
   <body>
     <!-- NAVBAR -->
     <header>
@@ -19,7 +20,14 @@
           <img src="images/logo.png" alt="pool remodeling project" />
           <div class="logo-text">Pacific Edge Pools</div>
         </div>
-        <ul class="nav-links">
+
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <ul class="nav-links" id="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About Us</a></li>
           <li><a href="service-areas.html">Services</a></li>
@@ -178,5 +186,16 @@
     <footer>
       <p>© 2026 Pacific Edge Pools. All rights reserved.</p>
     </footer>
+
+    <script>
+      // JavaScript for mobile menu toggle
+      const hamburger = document.getElementById("hamburger");
+      const navLinks = document.getElementById("nav-links");
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navLinks.classList.toggle("active");
+      });
+    </script>
   </body>
 </html>
