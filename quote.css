@@ -1,4 +1,6 @@
-/* BASIC RESET */
+/* ================================
+   BASIC RESET
+================================ */
 * {
   margin: 0;
   padding: 0;
@@ -6,11 +8,21 @@
   font-family: Arial, sans-serif;
 }
 
+:root {
+  --navbar-height: 90px;
+  --navbar-height-mobile: 70px;
+  --brand-blue: #003b6f;
+  --brand-blue-dark: #002a4a;
+}
+
 body {
+  padding-top: var(--navbar-height);
   color: #222;
 }
 
-/* NAVBAR */
+/* ================================
+   NAVBAR
+================================ */
 .navbar {
   background: white;
   padding: 20px 40px;
@@ -20,7 +32,7 @@ body {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   position: fixed;
   top: 0;
-  width: 100%;  
+  width: 100%;
   z-index: 1000;
 }
 
@@ -38,8 +50,20 @@ body {
 .logo-text {
   font-family: "Anton", sans-serif;
   font-size: 40px;
-  color: #003b6f;
+  color: var(--brand-blue);
   white-space: nowrap;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo-link:hover {
+  opacity: 0.9;
 }
 
 .nav-links {
@@ -50,13 +74,12 @@ body {
 }
 
 .nav-links li {
-  width: 100%;
   text-align: center;
-  padding: 15px;
+  padding: 10px 15px;
 }
 
 .nav-links a {
-  color: #003b6f;
+  color: var(--brand-blue);
   text-decoration: none;
   font-weight: bold;
   font-size: 18px;
@@ -65,17 +88,53 @@ body {
 .nav-links a.quote-btn {
   display: inline-block;
   padding: 8px 14px;
-  background: #003b6f;
+  background: var(--brand-blue);
   color: white;
   font-weight: bold;
   font-size: 16px;
   border-radius: 5px;
   text-align: center;
+  transition: background 0.2s ease;
 }
 
-/* HERO SECTION */
+.nav-links a.quote-btn:hover {
+  background: var(--brand-blue-dark);
+}
+
+/* ================================
+   HAMBURGER — hidden on desktop
+================================ */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  z-index: 1001;
+}
+
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  background: var(--brand-blue);
+  border-radius: 2px;
+  transition: 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ================================
+   HERO SECTION
+================================ */
 .county-hero {
-  background: #003b6f;
+  background: var(--brand-blue);
   color: white;
   padding: 80px 20px;
   text-align: center;
@@ -97,7 +156,9 @@ body {
   margin-right: 10px;
 }
 
-/* CONTAINER */
+/* ================================
+   CONTAINER
+================================ */
 .container {
   max-width: 1100px;
   margin: auto;
@@ -108,12 +169,14 @@ body {
 
 .container h2 {
   font-size: 32px;
-  color: #003b6f;
+  color: var(--brand-blue);
   margin-bottom: 20px;
   text-align: center;
 }
 
-/* SERVICES BUTTONS (CITY GRID) */
+/* ================================
+   CITY GRID / SERVICE BUTTONS
+================================ */
 .city-grid {
   display: flex;
   flex-wrap: wrap;
@@ -134,9 +197,7 @@ body {
   text-decoration: none;
   border-radius: 5px;
   font-weight: 600;
-  transition:
-    background-color 0.3s,
-    transform 0.2s;
+  transition: background-color 0.3s, transform 0.2s;
   flex: 1 1 220px;
   text-align: center;
 }
@@ -150,12 +211,30 @@ body {
   font-size: 1.2em;
 }
 
-/* SERVICE AREAS LINK */
+/* ================================
+   SERVICE AREAS BLOCK
+================================ */
+.service-areas {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.service-areas p {
+  margin-bottom: 15px;
+}
+
+.service-areas .cta-btn {
+  display: inline-block;
+}
+
+/* ================================
+   BUTTONS
+================================ */
 .container a.cta-btn {
   display: inline-block;
   margin-top: 15px;
   padding: 12px 20px;
-  background: #003b6f;
+  background: var(--brand-blue);
   color: white;
   border-radius: 6px;
   font-weight: bold;
@@ -164,23 +243,60 @@ body {
 }
 
 .container a.cta-btn:hover {
-  background: #002a4a;
+  background: var(--brand-blue-dark);
 }
 
-.service-areas {
-  text-align: center; 
-  margin-bottom: 50px;
+.primary-btn {
+  display: inline-block;
+  padding: 14px 34px;
+  background-color: var(--brand-blue);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.3s ease;
 }
 
-.service-areas p {
-  margin-bottom: 15px; 
+.primary-btn:hover {
+  background-color: var(--brand-blue-dark);
 }
 
-.service-areas .cta-btn {
-  display: inline-block; 
+.areas-btn {
+  display: inline-block;
+  padding: 14px 26px;
+  background: var(--brand-blue);
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 18px;
+  transition: background 0.2s ease;
 }
 
-/* QUOTE FORM */
+.areas-btn:hover {
+  background: var(--brand-blue-dark);
+}
+
+.cta-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 14px 28px;
+  background: var(--brand-blue);
+  color: white;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 17px;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.cta-btn:hover {
+  background: var(--brand-blue-dark);
+}
+
+/* ================================
+   QUOTE FORM
+================================ */
 .quote-form {
   max-width: 600px;
   margin: 0 auto;
@@ -196,13 +312,22 @@ body {
   font-size: 16px;
   border-radius: 6px;
   border: 1px solid #ccc;
+  width: 100%;
+}
+
+.quote-form input:focus,
+.quote-form select:focus,
+.quote-form textarea:focus {
+  outline: none;
+  border-color: var(--brand-blue);
+  box-shadow: 0 0 0 3px rgba(0, 59, 111, 0.1);
 }
 
 .quote-form button {
   display: block;
   margin: 30px auto 0;
   padding: 15px 30px;
-  background: #003b6f;
+  background: var(--brand-blue);
   color: white;
   border: none;
   border-radius: 6px;
@@ -213,7 +338,7 @@ body {
 }
 
 .quote-form button:hover {
-  background: #002a4a;
+  background: var(--brand-blue-dark);
   transform: translateY(-2px);
 }
 
@@ -224,126 +349,40 @@ body {
   color: #555;
 }
 
-
-/* FOOTER */
+/* ================================
+   FOOTER
+================================ */
 footer {
-  background: #003b6f;
+  background: var(--brand-blue);
   color: white;
   text-align: center;
   padding: 20px;
   margin-top: 40px;
 }
 
-/* =========================
-   RESPONSIVE DESIGN
-========================= */
-
-/* TABLETS */
+/* ================================
+   MOBILE/TABLET NAV
+   Single breakpoint — fixes Surface
+   Pro 7 (912px) and all tablets
+================================ */
 @media (max-width: 992px) {
-  .navbar {
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px;
+  body {
+    padding-top: var(--navbar-height-mobile);
   }
 
-  .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
+  .navbar {
+    flex-direction: row;
+    padding: 15px 20px;
   }
 
   .logo-text {
-    font-size: 28px;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero {
-    height: auto;
-    padding: 80px 20px;
+    font-size: 26px;
   }
 
-  .hero-content h1 {
-    font-size: 32px;
+  .logo img {
+    margin-left: 0;
   }
 
-  .hero-content p {
-    font-size: 16px;
-  }
-
-  .hero-button {
-    font-size: 16px;
-    padding: 10px 16px;
-  }
-}
-@media (max-width: 768px) {
-  .services {
-    padding: 50px 20px;
-  }
-
-  .services-grid {
-    gap: 20px;
-  }
-
-  .service-card {
-    width: 100%;
-    max-width: 500px;
-  }
-}
-@media (max-width: 768px) {
-  .why-choose-us-icons h2 {
-    margin-bottom: 40px;
-    font-size: 28px;
-  }
-
-  .icon-grid {
-    gap: 25px;
-  }
-}
-
-@media (max-width: 768px) {
-  .service-areas {
-    padding: 60px 20px;
-  }
-
-  .service-areas h2 {
-    font-size: 28px;
-  }
-
-  .service-areas p {
-    font-size: 16px;
-  }
-}
-@media (max-width: 480px) {
-  .primary-btn,
-  .cta-btn,
-  .areas-btn {
-    width: 100%;
-    text-align: center;
-  }
-}
-/* HAMBURGER MENU */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
-  z-index: 1000;
-  margin-left: auto;
-}
-
-.hamburger span {
-  width: 28px;
-  height: 3px;
-  background: #003b6f;
-  border-radius: 2px;
-  transition: 0.3s ease;
-}
-
-@media (max-width: 768px) {
-  .logo img{
-    margin-left: -40px;
-  }
   .hamburger {
     display: flex;
     position: absolute;
@@ -353,32 +392,81 @@ footer {
   }
 
   .nav-links {
+    display: none;
     position: absolute;
-    top: 100px;
+    top: 100%;
     left: 0;
     width: 100%;
     background: white;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
-    padding: 40px 0;
-
-    /* HIDDEN BY DEFAULT */
-    display: none;
+    gap: 0;
+    padding: 20px 0;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
 
   .nav-links.active {
     display: flex;
   }
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+  }
 }
 
-.hamburger.active span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
+/* ================================
+   DESKTOP 
+================================ */
+@media (min-width: 993px) {
+  .hamburger {
+    display: none !important;
+  }
+
+  .nav-links {
+    display: flex !important;
+  }
 }
-.hamburger.active span:nth-child(2) {
-  opacity: 0;
+
+/* ================================
+   SMALL SCREENS
+================================ */
+@media (max-width: 768px) {
+  .county-hero {
+    padding: 60px 20px;
+  }
+
+  .county-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .county-hero p {
+    font-size: 1rem;
+  }
+
+  .container {
+    padding: 40px 20px;
+  }
+
+  .container h2 {
+    font-size: 26px;
+  }
+
+  .city-btn {
+    flex: 1 1 100%;
+  }
+
+  .quote-form button {
+    width: 100%;
+  }
 }
-.hamburger.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(6px, -6px);
+
+@media (max-width: 480px) {
+  .primary-btn,
+  .cta-btn,
+  .areas-btn {
+    width: 100%;
+    text-align: center;
+  }
 }

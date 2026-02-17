@@ -1,3 +1,10 @@
+:root {
+  --navbar-height: 90px;
+}
+
+body {
+  padding-top: var(--navbar-height);
+}
 * {
   margin: 0;
   padding: 0;
@@ -5,11 +12,24 @@
   font-family: Arial, sans-serif;
 }
 
-body {
-  color: #222;
+/* ================================
+   CSS VARIABLES
+================================ */
+:root {
+  --navbar-height: 90px;
+  --navbar-height-mobile: 70px;
+  --brand-blue: #003b6f;
+  --brand-blue-dark: #002a4a;
 }
 
-/* NAVBAR */
+body {
+  color: #222;
+  padding-top: var(--navbar-height); /* FIX: offset for fixed navbar */
+}
+
+/* ================================
+   NAVBAR
+================================ */
 .navbar {
   background: white;
   padding: 20px 40px;
@@ -20,7 +40,7 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1000;  
+  z-index: 1000;
 }
 
 .logo {
@@ -37,8 +57,20 @@ body {
 .logo-text {
   font-family: "Anton", sans-serif;
   font-size: 40px;
-  color: #003b6f;
+  color: var(--brand-blue);
   white-space: nowrap;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo-link:hover {
+  opacity: 0.9;
 }
 
 .nav-links {
@@ -49,13 +81,12 @@ body {
 }
 
 .nav-links li {
-  width: 100%;
   text-align: center;
-  padding: 15px;
+  padding: 10px 15px;
 }
 
 .nav-links a {
-  color: #003b6f;
+  color: var(--brand-blue);
   text-decoration: none;
   font-weight: bold;
   font-size: 18px;
@@ -64,27 +95,59 @@ body {
 .nav-links a.quote-btn {
   display: inline-block;
   padding: 8px 14px;
-  background: #003b6f;
+  background: var(--brand-blue);
   font-weight: bold;
   font-size: 16px;
-  text-align: center;
-  text-decoration: none;
   color: white;
   border-radius: 5px;
+  transition: background 0.2s ease;
+}
+
+.nav-links a.quote-btn:hover {
+  background: var(--brand-blue-dark);
 }
 
 /* ================================
-   SERVICES – GLOBAL STYLES
+   HAMBURGER MENU
+================================ */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  z-index: 1000;
+}
+
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  background: var(--brand-blue);
+  border-radius: 2px;
+  transition: 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ================================
+   SERVICE HERO
 ================================ */
 .service-hero {
-  padding: 90px 40px 60px;
+  padding: 60px 40px 50px;
   background: #f5f7fa;
   text-align: center;
 }
 
 .service-hero h1 {
   font-size: 42px;
-  color: #003b6f;
+  color: var(--brand-blue);
   margin-bottom: 10px;
 }
 
@@ -92,7 +155,24 @@ body {
   font-size: 20px;
   color: #555;
   max-width: 700px;
+  margin: 0 auto 30px;
+}
+
+/* FIX: Smaller, responsive hero image */
+.service-hero-image {
+  max-width: 700px;       /* caps the width so it's not full-bleed */
   margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.service-hero-image img {
+  width: 100%;
+  height: auto;           /* maintains aspect ratio */
+  max-height: 420px;      /* prevents it from being too tall on wide screens */
+  object-fit: cover;
+  display: block;
 }
 
 /* ================================
@@ -101,7 +181,7 @@ body {
 .service-content {
   max-width: 900px;
   margin: 0 auto;
-  padding: 20px 40px;
+  padding: 50px 40px;
 }
 
 .service-content p {
@@ -109,19 +189,6 @@ body {
   line-height: 1.7;
   color: #333;
   margin-bottom: 20px;
-}
-.service-hero-image {
-  width: 100%;
-  aspect-ratio: 3/2;
-  overflow: hidden;
-  border-radius: 12px;
-}
-
-.service-hero-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  margin-top: 10px;
 }
 
 .service-list {
@@ -136,6 +203,7 @@ body {
   margin-bottom: 14px;
   position: relative;
   color: #333;
+  line-height: 1.5;
 }
 
 .service-list li::before {
@@ -143,131 +211,64 @@ body {
   position: absolute;
   left: 0;
   top: 0;
-  color: #003b6f;
+  color: var(--brand-blue);
   font-weight: bold;
 }
 
 /* ================================
-   SHARED NAV & FOOTER OVERRIDES
-   (only if needed for services)
+   CTA BANNER
 ================================ */
-
 .cta-banner {
   background: #f7f7f7;
-  color: #003b6f;
-  padding: 50px 20px;
+  color: var(--brand-blue);
+  padding: 60px 20px;
   text-align: center;
+}
+
+.cta-banner h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
 }
 
 .cta-btn {
   display: inline-block;
   margin-top: 15px;
-  padding: 12px 20px;
-  background: #003b6f;
+  padding: 14px 28px;
+  background: var(--brand-blue);
   color: white;
   border-radius: 6px;
   font-weight: bold;
+  font-size: 17px;
+  text-decoration: none;
+  transition: background 0.2s ease;
 }
+
+.cta-btn:hover {
+  background: var(--brand-blue-dark);
+}
+
+/* ================================
+   FOOTER
+================================ */
 footer {
-  background: #003b6f;
+  background: var(--brand-blue);
   color: #fff;
   text-align: center;
   padding: 20px;
-  margin-top: 40px;
 }
 
-/* =========================
-   RESPONSIVE DESIGN
-========================= */
-
-/* TABLETS */
-@media (max-width: 768px) {
-  .hero {
-    height: auto;
-    padding: 80px 20px;
+/* ================================
+   RESPONSIVE
+================================ */
+@media (max-width: 900px) {
+  body {
+    padding-top: var(--navbar-height-mobile);
   }
 
-  .hero-content h1 {
-    font-size: 32px;
+  .logo-text {
+    font-size: 26px;
   }
 
-  .hero-content p {
-    font-size: 16px;
-  }
-
-  .hero-button {
-    font-size: 16px;
-    padding: 10px 16px;
-  }
-}
-@media (max-width: 768px) {
-  .services {
-    padding: 50px 20px;
-  }
-
-  .services-grid {
-    gap: 20px;
-  }
-
-  .service-card {
-    width: 100%;
-    max-width: 500px;
-  }
-}
-@media (max-width: 768px) {
-  .why-choose-us-icons h2 {
-    margin-bottom: 40px;
-    font-size: 28px;
-  }
-
-  .icon-grid {
-    gap: 25px;
-  }
-}
-
-@media (max-width: 768px) {
-  .service-areas {
-    padding: 60px 20px;
-  }
-
-  .service-areas h2 {
-    font-size: 28px;
-  }
-
-  .service-areas p {
-    font-size: 16px;
-  }
-}
-@media (max-width: 480px) {
-  .primary-btn,
-  .cta-btn,
-  .areas-btn {
-    width: 100%;
-    text-align: center;
-  }
-}
-/* HAMBURGER MENU */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
-  z-index: 1000;
-  margin-left: auto;
-}
-
-.hamburger span {
-  width: 28px;
-  height: 3px;
-  background: #003b6f;
-  border-radius: 2px;
-  transition: 0.3s ease;
-}
-
-@media (max-width: 768px) {
-  .logo img{
-    margin-left: -20px;
-  }
   .hamburger {
     display: flex;
     position: absolute;
@@ -284,10 +285,8 @@ footer {
     background: white;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
-    padding: 40px 0;
-
-    /* HIDDEN BY DEFAULT */
+    gap: 0;
+    padding: 20px 0;
     display: none;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
@@ -295,51 +294,47 @@ footer {
   .nav-links.active {
     display: flex;
   }
-}
 
-.hamburger.active span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-.hamburger.active span:nth-child(2) {
-  opacity: 0;
-}
-.hamburger.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(6px, -6px);
-}
-/* Desktop */
-@media (min-width: 901px) {
-  .hamburger {
-    display: none;
+  .nav-links li {
+    width: 100%;
+    padding: 15px;
   }
 }
 
-/* Tablets + phones */
-@media (max-width: 900px) {
-  .hamburger {
-    display: flex;
+@media (max-width: 768px) {
+  .service-hero {
+    padding: 40px 20px 30px;
   }
 
-  .nav-links {
-    display: none;
+  .service-hero h1 {
+    font-size: 30px;
   }
-}
-@media (max-width: 900px) {
-  .logo-text {
-    font-size: 26px;
+
+  .service-hero p {
+    font-size: 16px;
+  }
+
+  .service-hero-image {
+    max-width: 100%;   /* full width on small screens */
+    border-radius: 8px;
+  }
+
+  .service-hero-image img {
+    max-height: 260px;
+  }
+
+  .service-content {
+    padding: 30px 20px;
+  }
+
+  .service-content p {
+    font-size: 16px;
   }
 }
 
-.logo-link {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-}
-
-.logo-link:visited,
-.logo-link:link {
-  color: inherit;
-}
-.logo-link:hover {
-  opacity: 0.9;
+@media (max-width: 480px) {
+  .cta-btn {
+    width: 100%;
+    text-align: center;
+  }
 }

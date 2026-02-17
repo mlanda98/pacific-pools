@@ -1,4 +1,9 @@
-
+:root {
+  --navbar-height: 90px;
+} 
+body {
+  padding-top: var(--navbar-height);
+}
 .service-areas {
   padding: 80px 20px;
   background-color: #f7f9fc;
