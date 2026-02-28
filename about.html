@@ -3,24 +3,111 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Us | Pacific Edge Pools</title>
-    <link rel="stylesheet" href="styles/about.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
+    <title>About Pacific Edge Pools | Licensed Pool Remodeling Contractor — Central Valley & Northern California</title>
+    <meta name="description" content="Pacific Edge Pools is a CSLB licensed pool remodeling contractor (#1144387) with 15+ years serving the Central Valley and Northern California. We serve Modesto, Stockton, Sacramento, Livermore, San Jose & more. Call (209) 831-2976 for a free quote." />
+    <meta name="keywords" content="pool remodeling contractor Central Valley, pool remodeling Northern California, licensed pool contractor California, CSLB pool contractor, pool plastering company Modesto, pool remodeling Sacramento, pool contractor San Jose, pool remodeling Stockton, pool contractor Fresno, pool replastering Livermore" />
+    <link rel="canonical" href="https://www.pacificedgepools.com/about" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="About Pacific Edge Pools | Licensed Pool Remodeling Contractor" />
+    <meta property="og:description" content="Pacific Edge Pools — licensed pool remodeling contractor (CSLB #1144387) with 15+ years serving Central Valley and Northern California. Modesto, Sacramento, San Jose & more. Free quotes." />
+    <meta property="og:url" content="https://www.pacificedgepools.com/about" />
+    <meta property="og:site_name" content="Pacific Edge Pools" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="About Pacific Edge Pools | Licensed Pool Remodeling Contractor" />
+    <meta name="twitter:description" content="Licensed pool remodeling & replastering — Central Valley and Northern California. CSLB #1144387. Free quotes (209) 831-2976." />
+
+    <!-- LocalBusiness Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Pacific Edge Pools",
+      "description": "Licensed pool remodeling, replastering, and resurfacing contractor serving Central Valley and Northern California.",
+      "telephone": "(209) 831-2976",
+      "foundingDate": "2010",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Patterson",
+        "addressRegion": "CA",
+        "postalCode": "95363",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 37.4716,
+        "longitude": -121.1297
+      },
+      "areaServed": ["Central Valley, CA", "Northern California", "Stanislaus County, CA", "San Joaquin County, CA", "Merced County, CA", "Sacramento County, CA", "Alameda County, CA"],
+      "url": "https://www.pacificedgepools.com",
+      "sameAs": ["https://www.instagram.com/pacificedgepools"]
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is Pacific Edge Pools licensed in California?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Pacific Edge Pools is a fully licensed California contractor under CSLB License #1144387. We are also bonded and insured."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long has Pacific Edge Pools been in business?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pacific Edge Pools has over 15 years of experience in pool remodeling, replastering, and resurfacing, including work in high-end markets like Carmel and Atherton."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What areas does Pacific Edge Pools serve?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We serve the Central Valley and Northern California including Modesto, Stockton, Tracy, Turlock, Fresno, Sacramento, Livermore, San Jose, San Francisco, Fremont, and Hayward."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pacificedgepools.com/"},
+        {"@type": "ListItem", "position": 2, "name": "About Us", "item": "https://www.pacificedgepools.com/about"}
+      ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/about.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   </head>
 
   <body>
+
     <!-- NAVBAR -->
     <header>
       <nav class="navbar">
-        <div class="logo">
-          <a href="index.html" class="logo-link">
-            <img src="images/logo.png" alt="pool remodeling project" />
-            <div class="logo-text">Pacific Edge Pools</div>
-          </a>
-        </div>
+        <a href="index.html" class="logo-link">
+          <img src="/images/logo.png" alt="Pacific Edge Pools" class="logo-img" />
+          <span class="logo-text">Pacific Edge Pools</span>
+        </a>
 
         <div class="hamburger" id="hamburger">
           <span></span>
@@ -28,7 +115,7 @@
           <span></span>
         </div>
 
-        <ul class="nav-links">
+        <ul class="nav-links" id="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About Us</a></li>
           <li><a href="service-areas.html">Services</a></li>
@@ -37,83 +124,79 @@
       </nav>
     </header>
 
-    <!-- HERO SECTION -->
+
+    <!-- HERO -->
     <section class="about-hero">
       <div class="about-hero-content">
-        <h1>Craftsmanship You Can Trust</h1>
-        <p>
-          High-end pool remodeling, honest communication, and results that last.
-        </p>
-      </div>
-
-      <div class="about-hero-image">
-        <img
-          src="/images/about-hero.jpg"
-          alt="Luxury pool remodeling by Pacific Edge Pools"
-        />
+        <p class="about-hero-eyebrow">CSLB Licensed Contractor #1144387</p>
+        <h1>Pool Remodeling & Replastering <span>Done Right</span></h1>
+        <p class="about-hero-sub">High-end craftsmanship, honest communication, and results that last — serving homeowners across the Central Valley and Northern California.</p>
+        <a href="quote.html" class="hero-button">Get a Free Quote</a>
       </div>
     </section>
 
     <!-- OUR STORY -->
     <section class="about-section">
       <div class="about-container">
-        <h2>Our Story</h2>
-        <p>
-          Pacific Edge Pools was built on a simple principle: do the job right
-          the first time. With over a decade of hands-on experience in high-end
-          pool construction and plastering, our team brings luxury-level
-          craftsmanship to homeowners throughout the Central Valley.
-        </p>
-
-        <p>
-          Our background includes working in elite markets such as Carmel and
-          Atherton, where attention to detail, precision, and professionalism
-          are non-negotiable. Today, we apply that same standard to every pool
-          we touch — no shortcuts, no guesswork.
-        </p>
+        <div class="about-story-grid">
+          <div class="about-story-text">
+            <p class="section-eyebrow">Who We Are</p>
+            <h2>Our Story</h2>
+            <p>Pacific Edge Pools was built on a simple principle: do the job right the first time. With over 15 years of hands-on experience in high-end pool remodeling, replastering, and resurfacing, our team brings luxury-level craftsmanship to homeowners throughout the Central Valley and Northern California.</p>
+            <p>Our background includes working in elite markets such as Carmel and Atherton, where attention to detail, precision, and professionalism are non-negotiable. Today, we apply that same standard to every pool remodeling and replastering project we take on — no shortcuts, no guesswork.</p>
+            <p>Whether you're in Modesto, Stockton, Sacramento, Livermore, or San Jose, you get the same quality, the same communication, and the same commitment to doing it right.</p>
+            <div class="about-license-badge">
+              <i class="fa-solid fa-shield-halved"></i>
+              CSLB Lic. #1144387 — Licensed, Bonded & Insured
+            </div>
+          </div>
+          <div class="about-story-stats">
+            <div class="about-stat">
+              <strong>15+</strong>
+              <span>Years Experience</span>
+            </div>
+            <div class="about-stat">
+              <strong>100%</strong>
+              <span>Licensed & Insured</span>
+            </div>
+            <div class="about-stat">
+              <strong>30+</strong>
+              <span>Cities Served</span>
+            </div>
+            <div class="about-stat">
+              <strong>Free</strong>
+              <span>Quotes & Estimates</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- WHAT SETS US APART -->
     <section class="about-values">
       <div class="about-container">
+        <p class="section-eyebrow">Why Choose Us</p>
         <h2>What Sets Us Apart</h2>
-
         <div class="values-grid">
           <div class="value-card">
-            <i class="fa-solid fa-shield-halved"></i>
+            <div class="value-icon"><i class="fa-solid fa-shield-halved"></i></div>
             <h3>Licensed & Insured</h3>
-            <p>
-              Fully licensed California contractor (CA License #1144387), bonded
-              and insured for total peace of mind.
-            </p>
+            <p>Fully licensed California contractor (CSLB #1144387), bonded and insured for total peace of mind.</p>
           </div>
-
           <div class="value-card">
-            <i class="fa-solid fa-gem"></i>
+            <div class="value-icon"><i class="fa-solid fa-gem"></i></div>
             <h3>Luxury-Level Experience</h3>
-            <p>
-              Experience gained in high-end markets means better finishes,
-              cleaner execution, and superior results.
-            </p>
+            <p>Experience gained in high-end markets means better finishes, cleaner execution, and superior results.</p>
           </div>
-
           <div class="value-card">
-            <i class="fa-solid fa-comments"></i>
+            <div class="value-icon"><i class="fa-solid fa-comments"></i></div>
             <h3>Clear Communication</h3>
-            <p>
-              You’ll always know what to expect — from timelines to materials to
-              project updates.
-            </p>
+            <p>You'll always know what to expect — from timelines to materials to project updates.</p>
           </div>
-
           <div class="value-card">
-            <i class="fa-solid fa-hammer"></i>
+            <div class="value-icon"><i class="fa-solid fa-hammer"></i></div>
             <h3>Quality That Lasts</h3>
-            <p>
-              We use proven materials and best practices to ensure durability,
-              longevity, and beauty.
-            </p>
+            <p>We use proven materials and best practices to ensure durability, longevity, and beauty.</p>
           </div>
         </div>
       </div>
@@ -122,66 +205,189 @@
     <!-- PROCESS -->
     <section class="about-process">
       <div class="about-container">
+        <p class="section-eyebrow">How It Works</p>
         <h2>Our Process</h2>
-        <p class="process-intro">
-          A clear, proven approach designed to eliminate surprises and deliver
-          results you’ll love.
-        </p>
-
+        <p class="process-intro">A clear, proven approach designed to eliminate surprises and deliver results you'll love.</p>
         <div class="process-grid">
           <div class="process-card">
-            <i class="fa-solid fa-phone-volume process-icon "></i>
-            <h3>1. Consultation</h3>
-            <p>
-              We evaluate your pool, listen to your goals, and offer expert
-              guidance.
-            </p>
+            <div class="process-number">01</div>
+            <div class="process-icon-wrap"><i class="fa-solid fa-phone-volume"></i></div>
+            <h3>Consultation</h3>
+            <p>We evaluate your pool, listen to your goals, and offer expert guidance on the best approach.</p>
           </div>
-
+          <div class="process-connector"><i class="fa-solid fa-arrow-right"></i></div>
           <div class="process-card">
-            <i class="fa-solid fa-clipboard-list process-icon"></i>
-            <h3>2.Planning</h3>
-            <p>Clear scope, materials, pricing, and timelines—no guesswork.</p>
+            <div class="process-number">02</div>
+            <div class="process-icon-wrap"><i class="fa-solid fa-clipboard-list"></i></div>
+            <h3>Planning</h3>
+            <p>Clear scope, materials, pricing, and timelines — no guesswork, no surprises.</p>
           </div>
-
+          <div class="process-connector"><i class="fa-solid fa-arrow-right"></i></div>
           <div class="process-card">
-            <i class="fa-solid fa-person-digging process-icon"></i>
-            <h3>3. Execution</h3>
-            <p>
-              Skilled craftsmanship, clean job sites, and attention to detail.
-            </p>
+            <div class="process-number">03</div>
+            <div class="process-icon-wrap"><i class="fa-solid fa-person-digging"></i></div>
+            <h3>Execution</h3>
+            <p>Skilled craftsmanship, clean job sites, and close attention to every detail.</p>
           </div>
-
+          <div class="process-connector"><i class="fa-solid fa-arrow-right"></i></div>
           <div class="process-card">
-            <i class="fa-solid fa-check-circle process-icon"></i>
-            <h3>4. Completion</h3>
-            <p>
-              Final walkthrough to ensure quality, durability, and satisfaction.
-            </p>
+            <div class="process-number">04</div>
+            <div class="process-icon-wrap"><i class="fa-solid fa-check-circle"></i></div>
+            <h3>Completion</h3>
+            <p>Final walkthrough to ensure quality, durability, and your complete satisfaction.</p>
           </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SERVICES WE OFFER -->
+    <section class="about-services-list">
+      <div class="about-container">
+        <p class="section-eyebrow">What We Do</p>
+        <h2>Our Pool Services</h2>
+        <p class="services-list-intro">We offer a full range of pool remodeling and renovation services throughout the Central Valley and Northern California.</p>
+        <div class="services-list-grid">
+          <a href="services/remodeling.html" class="service-list-item">
+            <i class="fa-solid fa-water"></i>
+            <div>
+              <h3>Pool Remodeling</h3>
+              <p>Complete pool transformations — new plaster, tile, coping, and more.</p>
+            </div>
+          </a>
+          <a href="services/plastering.html" class="service-list-item">
+            <i class="fa-solid fa-trowel-bricks"></i>
+            <div>
+              <h3>Pool Plastering</h3>
+              <p>Fresh plaster finishes that restore beauty and extend the life of your pool.</p>
+            </div>
+          </a>
+          <a href="services/resurfacing.html" class="service-list-item">
+            <i class="fa-solid fa-layer-group"></i>
+            <div>
+              <h3>Pool Resurfacing</h3>
+              <p>Pebble, quartz, and aggregate finishes built to last for years.</p>
+            </div>
+          </a>
+          <a href="services/tile-coping.html" class="service-list-item">
+            <i class="fa-solid fa-grip"></i>
+            <div>
+              <h3>Tile & Coping</h3>
+              <p>Waterline tile replacement and coping upgrades that elevate your pool's look.</p>
+            </div>
+          </a>
+          <a href="services/spa.html" class="service-list-item">
+            <i class="fa-solid fa-hot-tub-person"></i>
+            <div>
+              <h3>Spa Remodeling</h3>
+              <p>Spa renovations to match the quality and finish of your pool.</p>
+            </div>
+          </a>
         </div>
       </div>
     </section>
 
     <!-- CTA -->
     <section class="cta-banner">
-        <h2>Ready to Transform Your Pool?</h2>
-        <a href="quote.html" class="cta-btn">Get a Free Quote</a>
+      <h2>Ready to Transform Your Pool?</h2>
+      <p>Serving homeowners across the Central Valley and Northern California.</p>
+      <a href="quote.html" class="cta-btn">Get a Free Quote</a>
     </section>
 
     <!-- FOOTER -->
-    <footer class="footer">
-      <p>&copy; 2026 Pacific Edge Pools. All rights reserved.</p>
-    </footer>
-    
-    <script>
-      const hamburger = document.getElementById('hamburger');
-      const navLinks = document.querySelector('.nav-links');
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">Pacific Edge Pools</div>
+          <p class="footer-tagline">Professional pool remodeling, replastering, and resurfacing serving the Central Valley and Northern California.</p>
+          <div class="footer-license-badge">
+            <i class="fa-solid fa-shield-halved"></i>
+            CSLB Lic. #1144387
+          </div>
+          <div class="footer-contact-info">
+            <a href="tel:2098312976"><i class="fa-solid fa-phone"></i>(209) 831-2976</a>
+            <span><i class="fa-solid fa-location-dot"></i>Patterson, CA</span>
+            <span><i class="fa-solid fa-map"></i>Serving Central Valley & Northern California</span>
+          </div>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/pacificedgepools" target="_blank" rel="noopener" aria-label="Follow Pacific Edge Pools on Instagram">
+              <i class="fa-brands fa-instagram"></i>
+              @pacificedgepools
+            </a>
+          </div>
+        </div>
 
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services/remodeling.html">Pool Remodeling</a></li>
+            <li><a href="services/plastering.html">Pool Plastering</a></li>
+            <li><a href="services/resurfacing.html">Pool Resurfacing</a></li>
+            <li><a href="services/tile-coping.html">Tile & Coping</a></li>
+            <li><a href="services/spa.html">Spa Remodeling</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="service-areas.html">Service Areas</a></li>
+            <li><a href="quote.html">Get a Quote</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Areas We Serve</h4>
+          <ul>
+            <li><a href="service-areas/northern-california/alameda-county/livermore.html">Livermore, CA</a></li>
+            <li><a href="service-areas/northern-california/alameda-county/pleasanton.html">Pleasanton, CA</a></li>
+            <li><a href="service-areas/central-valley/san-joaquin-county/stockton.html">Stockton, CA</a></li>
+            <li><a href="service-areas/central-valley/san-joaquin-county/tracy.html">Tracy, CA</a></li>
+            <li><a href="service-areas.html">View All Areas →</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Pacific Edge Pools. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- LICENSE BADGE -->
+    <div class="license-badge">
+      <i class="fa-solid fa-shield-halved"></i>
+      <span>CSLB Lic. #1144387</span>
+    </div>
+
+    <!-- STICKY CALL BUTTON -->
+    <a href="tel:2098312976" class="sticky-call" aria-label="Call Pacific Edge Pools">
+      <i class="fa-solid fa-phone"></i>
+      <span class="call-label">(209) 831-2976</span>
+    </a>
+
+
+    <script>
+      // Navbar — transparent initially, solid on scroll (matches homepage)
+      const navbar = document.querySelector('.navbar');
+      window.addEventListener('scroll', () => {
+        navbar.classList.toggle('scrolled', window.scrollY > 50);
+      });
+
+      // Hamburger menu
+      const hamburger = document.getElementById('hamburger');
+      const navLinks = document.getElementById('nav-links');
       hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('active');
         navLinks.classList.toggle('active');
       });
     </script>
+
   </body>
 </html>
