@@ -2,75 +2,164 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LDJHE1H32J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag("js", new Date());
+      gtag("config", "G-LDJHE1H32J");
+    </script>
+
     <title>Thank You | Pacific Edge Pools</title>
-    <meta
-      name="description"
-      content="Thank you for requesting a pool quote from Pacific Edge Pools."
-    />
+    <meta name="description" content="Thank you for contacting Pacific Edge Pools. We'll be in touch within 24 hours about your pool remodeling quote." />
+    <meta name="robots" content="noindex, nofollow" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/styles/service-areas.css" />
+    <link rel="stylesheet" href="/styles/thank-you.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   </head>
 
   <body>
-    <!-- NAVBAR (reuse your existing nav) -->
+
+    <!-- NAVBAR -->
     <header>
       <nav class="navbar">
-        <div class="logo">
-          <img src="images/logo.png" alt="Pacific Edge Pools logo" />
-          <div class="logo-text">Pacific Edge Pools</div>
-        </div>
+        <a href="index.html" class="logo-link">
+          <img src="/images/logo.png" alt="Pacific Edge Pool" class="logo-img" />
+          <span class="logo-text">Pacific Edge Pools</span>
+        </a>
 
         <div class="hamburger" id="hamburger">
           <span></span>
           <span></span>
           <span></span>
         </div>
-        <ul class="nav-links">
+
+        <ul class="nav-links" id="nav-links">
           <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="quote.html">Get a Quote</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="service-areas.html">Services</a></li>
+          <li><a class="quote-btn" href="quote.html">Get a Quote</a></li>
         </ul>
       </nav>
     </header>
 
-    <!-- SUCCESS MESSAGE -->
-    <section class="county-hero">
-      <h1>Thank You!</h1>
-      <p>Your quote request has been successfully submitted.</p>
-    </section>
 
-    <section class="container">
-      <h2>What Happens Next?</h2>
-      <p>
-        One of our pool specialists will review your request and contact you
-        within 24 hours to discuss your project.
-      </p>
-
-      <p>If your project is urgent, feel free to call us directly.</p>
-
-      <div style="text-align: center; margin-top: 30px">
-        <a href="index.html" class="cta-btn">
-          <i class="fa-solid fa-house"></i> Return to Home
-        </a>
+    <!-- THANK YOU HERO -->
+    <section class="thankyou-hero">
+      <div class="thankyou-content">
+        <div class="thankyou-icon">
+          <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <h1>Request Received!</h1>
+        <p>Thanks for reaching out to Pacific Edge Pools. We'll review your project details and get back to you within <strong>24 hours</strong>.</p>
+        <p class="thankyou-sub">In the meantime, feel free to call us directly at <a href="tel:2098312976" onclick="gtag('event', 'phone_call_click', {'event_category': 'Lead', 'event_label': 'Phone Call', 'value': 1})">(209) 831-2976</a>.</p>
+        <div class="thankyou-actions">
+          <a href="/" class="thankyou-btn primary">Back to Home</a>
+          <a href="/service-areas.html" class="thankyou-btn secondary">View Service Areas</a>
+        </div>
       </div>
-
-      <a href="index.html" class="cta-btn">Return to Home</a>
     </section>
 
     <!-- FOOTER -->
-    <footer>
-      <p>© 2026 Pacific Edge Pools. All rights reserved.</p>
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">Pacific Edge Pools</div>
+          <p class="footer-tagline">Professional pool remodeling, replastering, and resurfacing serving the Central Valley and Northern California.</p>
+          <div class="footer-license-badge">
+            <i class="fa-solid fa-shield-halved"></i>
+            CSLB Lic. #1144387
+          </div>
+          <div class="footer-contact-info">
+            <a href="tel:2098312976" onclick="gtag('event', 'phone_call_click', {'event_category': 'Lead', 'event_label': 'Phone Call', 'value': 1})"><i class="fa-solid fa-phone"></i>(209) 831-2976</a>
+            <span><i class="fa-solid fa-location-dot"></i>Patterson, CA</span>
+            <span><i class="fa-solid fa-map"></i>Serving Central Valley & Northern California</span>
+          </div>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/pacificedgepools" target="_blank" rel="noopener" aria-label="Follow Pacific Edge Pools on Instagram">
+              <i class="fa-brands fa-instagram"></i>
+              @pacificedgepools
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services/remodeling.html">Pool Remodeling</a></li>
+            <li><a href="services/plastering.html">Pool Plastering</a></li>
+            <li><a href="services/resurfacing.html">Pool Resurfacing</a></li>
+            <li><a href="services/tile-coping.html">Tile & Coping</a></li>
+            <li><a href="services/spa.html">Spa Remodeling</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="service-areas.html">Service Areas</a></li>
+            <li><a href="quote.html">Get a Quote</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Areas We Serve</h4>
+          <ul>
+            <li><a href="service-areas/northern-california/alameda-county/livermore.html">Livermore, CA</a></li>
+            <li><a href="service-areas/northern-california/alameda-county/pleasanton.html">Pleasanton, CA</a></li>
+            <li><a href="service-areas/central-valley/san-joaquin-county/stockton.html">Stockton, CA</a></li>
+            <li><a href="service-areas/central-valley/san-joaquin-county/tracy.html">Tracy, CA</a></li>
+            <li><a href="service-areas.html">View All Areas →</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Pacific Edge Pools. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
     </footer>
 
-    <script>
-      const hamburger = document.getElementById('hamburger');
-      const navLinks = document.querySelector('.nav-links');
 
+    <!-- LICENSE BADGE -->
+    <div class="license-badge">
+      <i class="fa-solid fa-shield-halved"></i>
+      <span>CSLB Lic. #1144387</span>
+    </div>
+
+    <!-- STICKY CALL BUTTON -->
+    <a href="tel:2098312976" onclick="gtag('event', 'phone_call_click', {'event_category': 'Lead', 'event_label': 'Phone Call', 'value': 1})" class="sticky-call" aria-label="Call Pacific Edge Pools">
+      <i class="fa-solid fa-phone"></i>
+      <span class="call-label">(209) 831-2976</span>
+    </a>
+
+    <script>
+      // Fire GA4 conversion event
+      gtag("event", "quote_submitted", {
+        "event_category": "Lead",
+        "event_label": "Quote Form",
+        "value": 1
+      });
+
+      // Navbar scroll
+      const navbar = document.querySelector('.navbar');
+      navbar.classList.add('scrolled');
+
+      // Hamburger
+      const hamburger = document.getElementById('hamburger');
+      const navLinks = document.getElementById('nav-links');
       hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('active');
         navLinks.classList.toggle('active');
-        });
-        
+      });
     </script>
+
   </body>
 </html>

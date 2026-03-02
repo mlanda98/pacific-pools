@@ -2,37 +2,91 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Get a Quote | Pacific Edge Pools</title>
-    <meta
-      name="description"
-      content="Request a free quote from Pacific Edge Pools for pool remodeling, replastering, plastering, resurfacing, spa renovations, or tile and coping. Serving Central Valley and Northern California."
-    />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LDJHE1H32J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag("js", new Date());
+      gtag("config", "G-LDJHE1H32J");
+    </script>
+
+    <title>Get a Free Pool Remodeling Quote | Pacific Edge Pools — Central Valley & Northern California</title>
+    <meta name="description" content="Request a free quote from Pacific Edge Pools for pool remodeling, replastering, resurfacing, tile & coping, or spa remodeling. Serving Central Valley and Northern California. CSLB #1144387. Call (209) 831-2976." />
+    <meta name="keywords" content="free pool remodeling quote Central Valley, pool replastering estimate Northern California, pool resurfacing quote Modesto, pool contractor quote Stockton, pool remodeling estimate Sacramento, free pool quote San Jose" />
+    <link rel="canonical" href="https://www.pacificedgepools.com/quote" />
+    <meta name="robots" content="index, follow" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Font Awesome Icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-    <link rel="stylesheet" href="/styles/main.css" />
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Get a Free Pool Remodeling Quote | Pacific Edge Pools" />
+    <meta property="og:description" content="Request a free estimate for pool remodeling, replastering, or resurfacing in Central Valley and Northern California. CSLB #1144387." />
+    <meta property="og:url" content="https://www.pacificedgepools.com/quote" />
+    <meta property="og:site_name" content="Pacific Edge Pools" />
+
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pacificedgepools.com/"},
+        {"@type": "ListItem", "position": 2, "name": "Get a Quote", "item": "https://www.pacificedgepools.com/quote"}
+      ]
+    }
+    </script>
+
+    <!-- Service Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Pool Remodeling & Replastering",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Pacific Edge Pools",
+        "telephone": "(209) 831-2976",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Patterson",
+          "addressRegion": "CA",
+          "postalCode": "95363"
+        }
+      },
+      "areaServed": ["Central Valley, CA", "Northern California"],
+      "description": "Professional pool remodeling, replastering, resurfacing, tile & coping, and spa remodeling serving Central Valley and Northern California.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "description": "Free quote and estimate"
+      }
+    }
+    </script>
+
     <link rel="stylesheet" href="/styles/quote.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   </head>
+
   <body>
+
     <!-- NAVBAR -->
     <header>
       <nav class="navbar">
-        <div class="logo">
-          <img src="images/logo.png" alt="pool remodeling project" />
-          <div class="logo-text">Pacific Edge Pools</div>
-        </div>
+        <a href="index.html" class="logo-link">
+          <img src="/images/logo.png" alt="Pacific Edge Pools" class="logo-img" />
+          <span class="logo-text">Pacific Edge Pools</span>
+        </a>
 
         <div class="hamburger" id="hamburger">
           <span></span>
           <span></span>
           <span></span>
-        </div>  
+        </div>
 
-        <ul class="nav-links">
+        <ul class="nav-links" id="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About Us</a></li>
           <li><a href="service-areas.html">Services</a></li>
@@ -41,115 +95,239 @@
       </nav>
     </header>
 
-    <!-- HERO SECTION -->
-    <section class="county-hero">
-      <h1><i class="fa-solid fa-pencil"></i> Request Your Free Quote</h1>
-      <p>
-        Fill out the form below and our experts will provide a personalized
-        estimate for your pool project.
-      </p>
-    </section>
 
-    <!-- SERVICES LIST -->
-    <section class="container">
-      <h2>Our Pool Services</h2>
-      <ul class="city-grid">
-        <li>
-          <a class="city-btn" href="services/remodeling.html"
-            ><i class="fa-solid fa-water"></i> Pool Remodeling</a
-          >
-        </li>
-        <li>
-          <a class="city-btn" href="services/plastering.html"
-            ><i class="fa-solid fa-droplet"></i> Pool Plastering</a
-          >
-        </li>
-        <li>
-          <a class="city-btn" href="services/resurfacing.html"
-            ><i class="fa-solid fa-layer-group"></i> Pool Resurfacing</a
-          >
-        </li>
-        <li>
-          <a class="city-btn" href="services/spa.html"
-            ><i class="fa-solid fa-spa"></i> Spa Remodeling</a
-          >
-        </li>
-        <li>
-          <a class="city-btn" href="services/tile-coping.html"
-            ><i class="fa-solid fa-border-all"></i> Tile & Coping</a
-          >
-        </li>
-      </ul>
-    </section>
-
-    <!-- SERVICE AREAS LINK -->
-    <section class="container">
-      <h2>We Serve Your Area</h2>
-      <div class="service-areas">
-        <p>
-          Pacific Edge Pools proudly serves Central Valley, Northern California,
-          and surrounding areas.
-        </p>
-        <a href="service-areas.html" class="cta-btn">View All Service Areas</a>
+    <!-- HERO -->
+    <section class="quote-hero">
+      <div class="quote-hero-content">
+        <p class="quote-hero-eyebrow">CSLB Licensed Contractor #1144387</p>
+        <h1>Get Your Free <span>Pool Quote</span></h1>
+        <p class="quote-hero-sub">Tell us about your project and we'll get back to you with a personalized estimate — serving the Central Valley and Northern California.</p>
       </div>
     </section>
 
-    <!-- QUOTE FORM -->
-    <section class="container">
-      <h2>Request a Free Pool Quote</h2>
+    <!-- QUOTE FORM + SIDEBAR -->
+    <section class="quote-section">
+      <div class="quote-inner">
 
-      <form
-        class="quote-form"
-        action="https://formspree.io/f/xjgojyag"
-        method="POST"
-      >
-        <input type="text" name="name" placeholder="Full Name" required />
+        <!-- FORM -->
+        <div class="quote-form-wrap">
+          <h2>Request a Free Estimate</h2>
+          <p class="form-sub">Fill out the form below and we'll be in touch within 24 hours.</p>
 
-        <input type="email" name="email" placeholder="Email Address" required />
+          <form class="quote-form" id="quoteForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name" placeholder="John Smith" required />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" placeholder="(209) 555-0000" required />
+              </div>
+            </div>
 
-        <input type="tel" name="phone" placeholder="Phone Number" required />
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required />
+            </div>
 
-        <select name="service" required>
-          <option value="">Select a Service</option>
-          <option value="Pool Remodeling">Pool Remodeling</option>
-          <option value="Pool Resurfacing">Pool Resurfacing</option>
-          <option value="Pool Plastering">Pool Plastering</option>
-          <option value="Tile & Coping">Tile & Coping</option>
-          <option value="Spa Remodeling">Spa Remodeling</option>
-        </select>
+            <div class="form-group">
+              <label for="city">Your City *</label>
+              <input type="text" id="city" name="city" placeholder="e.g. Modesto, Stockton, Livermore..." required />
+            </div>
 
-        <textarea
-          name="message"
-          placeholder="Tell us about your pool project..."
-          rows="5"
-          required
-        ></textarea>
+            <div class="form-group">
+              <label for="service">Service Needed *</label>
+              <select id="service" name="service" required>
+                <option value="">Select a Service</option>
+                <option value="Pool Remodeling">Pool Remodeling</option>
+                <option value="Pool Replastering">Pool Replastering</option>
+                <option value="Pool Resurfacing">Pool Resurfacing</option>
+                <option value="Tile & Coping">Tile & Coping</option>
+                <option value="Spa Remodeling">Spa Remodeling</option>
+                <option value="Not Sure">Not Sure — Need Consultation</option>
+              </select>
+            </div>
 
-        <!-- Optional Formspree helpers -->
-        <input type="hidden" name="_redirect" value="thank-you.html" />
-        <button type="submit">
-          <i class="fa-solid fa-paper-plane"></i> Submit Request
-        </button>
-      </form>
+            <div class="form-group">
+              <label for="message">Tell Us About Your Project</label>
+              <textarea id="message" name="message" placeholder="Describe your pool, what needs to be done, any specific concerns..." rows="5"></textarea>
+            </div>
 
-      <p class="form-fallback">
-        If you don’t hear back within 24 hours, please call us directly.
-      </p>
+
+            <button type="submit"><i class="fa-solid fa-paper-plane"></i> Submit Request</button>
+          </form>
+
+          <p class="form-fallback">Prefer to call? Reach us at <a href="tel:2098312976" onclick="gtag('event', 'phone_call_click', {'event_category': 'Lead', 'event_label': 'Phone Call', 'value': 1})">(209) 831-2976</a></p>
+        </div>
+
+        <!-- SIDEBAR -->
+        <div class="quote-sidebar">
+
+          <div class="sidebar-card">
+            <h3><i class="fa-solid fa-shield-halved"></i> Why Pacific Edge Pools</h3>
+            <ul class="sidebar-list">
+              <li><i class="fa-solid fa-check"></i> CSLB Licensed #1144387</li>
+              <li><i class="fa-solid fa-check"></i> Bonded & Insured</li>
+              <li><i class="fa-solid fa-check"></i> 15+ Years Experience</li>
+              <li><i class="fa-solid fa-check"></i> Free Quotes & Estimates</li>
+              <li><i class="fa-solid fa-check"></i> Luxury-Level Craftsmanship</li>
+              <li><i class="fa-solid fa-check"></i> Serving 30+ Cities</li>
+            </ul>
+          </div>
+
+          <div class="sidebar-card">
+            <h3><i class="fa-solid fa-phone"></i> Call Us Directly</h3>
+            <a href="tel:2098312976" onclick="gtag('event', 'phone_call_click', {'event_category': 'Lead', 'event_label': 'Phone Call', 'value': 1})" class="sidebar-phone">(209) 831-2976</a>
+            <p class="sidebar-note">Mon–Sat, 7am–6pm</p>
+          </div>
+
+          <div class="sidebar-card">
+            <h3><i class="fa-solid fa-water"></i> Services We Offer</h3>
+            <ul class="sidebar-services">
+              <li><a href="/services/remodeling.html">Pool Remodeling</a></li>
+              <li><a href="/services/plastering.html">Pool Plastering</a></li>
+              <li><a href="/services/resurfacing.html">Pool Resurfacing</a></li>
+              <li><a href="/services/tile-coping.html">Tile & Coping</a></li>
+              <li><a href="/services/spa.html">Spa Remodeling</a></li>
+            </ul>
+          </div>
+
+          <div class="sidebar-card">
+            <h3><i class="fa-solid fa-map-location-dot"></i> Areas We Serve</h3>
+            <p class="sidebar-areas">Modesto · Stockton · Tracy · Turlock · Sacramento · Livermore · Pleasanton · San Jose · Fresno · and more</p>
+            <a href="/service-areas.html" class="sidebar-link">View All Service Areas →</a>
+          </div>
+
+        </div>
+      </div>
     </section>
 
     <!-- FOOTER -->
-    <footer>
-      <p>© 2026 Pacific Edge Pools. All rights reserved.</p>
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">Pacific Edge Pools</div>
+          <p class="footer-tagline">Professional pool remodeling, replastering, and resurfacing serving the Central Valley and Northern California.</p>
+          <div class="footer-license-badge">
+            <i class="fa-solid fa-shield-halved"></i>
+            CSLB Lic. #1144387
+          </div>
+          <div class="footer-contact-info">
+            <a href="tel:2098312976" onclick="gtag('event', 'phone_call_click', {'event_category': 'Lead', 'event_label': 'Phone Call', 'value': 1})"><i class="fa-solid fa-phone"></i>(209) 831-2976</a>
+            <span><i class="fa-solid fa-location-dot"></i>Patterson, CA</span>
+            <span><i class="fa-solid fa-map"></i>Serving Central Valley & Northern California</span>
+          </div>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/pacificedgepools" target="_blank" rel="noopener" aria-label="Follow Pacific Edge Pools on Instagram">
+              <i class="fa-brands fa-instagram"></i>
+              @pacificedgepools
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services/remodeling.html">Pool Remodeling</a></li>
+            <li><a href="services/plastering.html">Pool Plastering</a></li>
+            <li><a href="services/resurfacing.html">Pool Resurfacing</a></li>
+            <li><a href="services/tile-coping.html">Tile & Coping</a></li>
+            <li><a href="services/spa.html">Spa Remodeling</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="service-areas.html">Service Areas</a></li>
+            <li><a href="quote.html">Get a Quote</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Areas We Serve</h4>
+          <ul>
+            <li><a href="service-areas/northern-california/alameda-county/livermore.html">Livermore, CA</a></li>
+            <li><a href="service-areas/northern-california/alameda-county/pleasanton.html">Pleasanton, CA</a></li>
+            <li><a href="service-areas/central-valley/san-joaquin/stockton.html">Stockton, CA</a></li>
+            <li><a href="service-areas/central-valley/san-joaquin/tracy.html">Tracy, CA</a></li>
+            <li><a href="service-areas.html">View All Areas →</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Pacific Edge Pools. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
     </footer>
 
-    <script>
-      const hamburger = document.getElementById('hamburger');
-      const navLinks = document.querySelector('.nav-links');
 
+    <!-- LICENSE BADGE -->
+    <div class="license-badge">
+      <i class="fa-solid fa-shield-halved"></i>
+      <span>CSLB Lic. #1144387</span>
+    </div>
+
+    <!-- STICKY CALL BUTTON -->
+    <a href="tel:2098312976" onclick="gtag('event', 'phone_call_click', {'event_category': 'Lead', 'event_label': 'Phone Call', 'value': 1})" class="sticky-call" aria-label="Call Pacific Edge Pools">
+      <i class="fa-solid fa-phone"></i>
+      <span class="call-label">(209) 831-2976</span>
+    </a>
+
+    <script>
+      // Navbar scroll effect
+      const navbar = document.querySelector('.navbar');
+      window.addEventListener('scroll', () => {
+        navbar.classList.toggle('scrolled', window.scrollY > 50);
+      });
+
+      // Hamburger menu
+      const hamburger = document.getElementById('hamburger');
+      const navLinks = document.getElementById('nav-links');
       hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('active');
         navLinks.classList.toggle('active');
       });
+
+      // Form submission — posts to Formspree then redirects to thank-you page
+      const quoteForm = document.getElementById('quoteForm');
+      quoteForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        const submitBtn = quoteForm.querySelector('button[type="submit"]');
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+
+        const formData = new FormData(quoteForm);
+
+        try {
+          const response = await fetch('https://formspree.io/f/xjgojyag', {
+            method: 'POST',
+            body: formData,
+            headers: { 'Accept': 'application/json' }
+          });
+
+          if (response.ok) {
+            window.location.href = '/thank-you.html';
+          } else {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Submit Request';
+            alert('Something went wrong. Please try again or call us at (209) 831-2976.');
+          }
+        } catch (error) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Submit Request';
+          alert('Something went wrong. Please try again or call us at (209) 831-2976.');
+        }
+      });
     </script>
+
   </body>
 </html>

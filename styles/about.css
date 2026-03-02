@@ -56,11 +56,10 @@ body {
 .logo-img {
   height: 48px;
   width: auto;
-  filter: brightness(0) invert(1);
-  transition: filter 0.35s ease;
+  transition: opacity 0.35s ease;
 }
 
-.navbar.scrolled .logo-img { filter: none; }
+.navbar.scrolled .logo-img { }
 
 .logo-text {
   font-family: "Anton", sans-serif;
@@ -1167,7 +1166,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 280px;
   gap: 60px;
-  align-items: start;
+  align-items: center;
 }
 
 .about-story-text h2 {
