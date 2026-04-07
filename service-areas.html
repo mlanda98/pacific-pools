@@ -2,31 +2,241 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Service Areas | Pacific Edge Pools</title>
-    <meta
-      name="description"
-      content="Pacific Edge Pools proudly serves Central Valley and Northern California counties with expert pool remodeling and replastering services."
-    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LDJHE1H32J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag("js", new Date());
+      gtag("config", "G-LDJHE1H32J");
+    </script>
+    <title>Pool Remodeling Service Areas | Pacific Edge Pools</title>
+    <meta name="description" content="Pacific Edge Pools serves the Central Valley AND Northern California — Modesto, Stockton, Fresno, Sacramento, Bay Area, Silicon Valley, Wine Country, and more. CSLB #1144387. Free quotes — (209) 831-2976." />
+    <link rel="canonical" href="https://www.pacificedgepools.com/service-areas/" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Pool Remodeling Service Areas | Pacific Edge Pools" />
+    <meta property="og:description" content="Pacific Edge Pools serves the Central Valley and Northern California. CSLB #1144387. Free quotes — (209) 831-2976." />
+    <meta property="og:url" content="https://www.pacificedgepools.com/service-areas/" />
+    <meta property="og:site_name" content="Pacific Edge Pools" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Pacific Edge Pools",
+      "description": "Licensed pool remodeling, replastering, and resurfacing contractor serving the Central Valley and Northern California.",
+      "telephone": "(209) 831-2976",
+      "address": {"@type": "PostalAddress", "addressLocality": "Patterson", "addressRegion": "CA", "postalCode": "95363", "addressCountry": "US"},
+      "areaServed": ["Central Valley, CA", "Northern California"],
+      "url": "https://www.pacificedgepools.com",
+      "sameAs": ["https://www.instagram.com/pacificedgepools"]
+    }
+    </script>
+    <link rel="stylesheet" href="/styles/county.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <style>
+      /* ── REGION LAYOUT ─────────────────────────────── */
+      .regions-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 60px 24px 80px;
+      }
 
-    <!-- Font Awesome Icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
+      .region-block {
+        margin-bottom: 64px;
+      }
 
-    <link rel="stylesheet" href="/styles/service-areas.css" />
+      .region-block:last-child {
+        margin-bottom: 0;
+      }
+
+      .region-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 24px;
+        padding-bottom: 16px;
+        border-bottom: 2px solid #e0eaf4;
+      }
+
+      .region-header-left {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+
+      .region-icon {
+        width: 48px;
+        height: 48px;
+        background: linear-gradient(135deg, #003b6f, #0077b6);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 20px;
+        flex-shrink: 0;
+      }
+
+      .region-header h2 {
+        font-size: 26px;
+        font-weight: 800;
+        color: #003b6f;
+        margin: 0 0 2px;
+        letter-spacing: -0.4px;
+      }
+
+      .region-header p {
+        font-size: 13px;
+        color: #777;
+        margin: 0;
+      }
+
+      .region-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: #f0f7ff;
+        border: 1px solid #b8d8f5;
+        color: #0077b6;
+        font-weight: 600;
+        font-size: 13px;
+        text-decoration: none;
+        padding: 8px 16px;
+        border-radius: 20px;
+        white-space: nowrap;
+        transition: background 0.2s, border-color 0.2s;
+      }
+
+      .region-link:hover {
+        background: #0077b6;
+        color: white;
+        border-color: #0077b6;
+      }
+
+      /* ── COUNTY CARDS ─────────────────────────────── */
+      .county-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        gap: 14px;
+      }
+
+      .county-card {
+        display: flex;
+        flex-direction: column;
+        background: white;
+        border: 1px solid #e0eaf4;
+        border-radius: 14px;
+        padding: 20px 20px 16px;
+        text-decoration: none;
+        transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .county-card::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, #003b6f, #0077b6);
+        opacity: 0;
+        transition: opacity 0.18s;
+      }
+
+      .county-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 24px rgba(0,59,111,0.12);
+        border-color: #b8d8f5;
+      }
+
+      .county-card:hover::before {
+        opacity: 1;
+      }
+
+      .county-card-top {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-bottom: 10px;
+      }
+
+      .county-card-name {
+        font-size: 16px;
+        font-weight: 700;
+        color: #003b6f;
+        line-height: 1.2;
+      }
+
+      .county-card-arrow {
+        color: #b8d8f5;
+        font-size: 14px;
+        transition: color 0.18s, transform 0.18s;
+        margin-top: 2px;
+        flex-shrink: 0;
+      }
+
+      .county-card:hover .county-card-arrow {
+        color: #0077b6;
+        transform: translateX(3px);
+      }
+
+      .county-card-cities {
+        font-size: 12px;
+        color: #888;
+        line-height: 1.5;
+      }
+
+      .county-card-count {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        margin-top: 12px;
+        font-size: 11px;
+        font-weight: 600;
+        color: #0077b6;
+        background: #f0f7ff;
+        padding: 4px 10px;
+        border-radius: 20px;
+      }
+
+      .county-card-count i {
+        font-size: 10px;
+      }
+
+      @media (max-width: 640px) {
+        .county-grid {
+          grid-template-columns: 1fr 1fr;
+          gap: 10px;
+        }
+        .county-card {
+          padding: 16px 14px 12px;
+        }
+        .county-card-name { font-size: 14px; }
+        .county-card-cities { font-size: 11px; }
+        .region-header {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 12px;
+        }
+        .regions-wrapper { padding: 40px 16px 60px; }
+      }
+
+      @media (max-width: 400px) {
+        .county-grid { grid-template-columns: 1fr; }
+      }
+    </style>
   </head>
   <body>
+
     <!-- NAVBAR -->
     <header>
       <nav class="navbar">
-        <div class="logo">
-          <a href="index.html" class="logo-link">
-            <img src="images/logo.png" alt="pool remodeling project" />
-            <div class="logo-text">Pacific Edge Pools</div>
-          </a>
-        </div>
+        <a href="index.html" class="logo-link">
+          <img src="/images/logo.png" alt="Pacific Edge Pools" class="logo-img" />
+          <span class="logo-text">Pacific Edge Pools</span>
+        </a>
 
         <div class="hamburger" id="hamburger">
           <span></span>
@@ -43,152 +253,313 @@
       </nav>
     </header>
 
-    <!-- SERVICE AREAS SECTION -->
-    <section class="service-areas">
-      <div class="service-areas-container">
-        <h1><i class="fa-solid fa-map-location-dot"></i> Service Areas</h1>
-        <p class="intro">
-          Pacific Edge Pools provides professional pool remodeling,
-          replastering, and renovation services throughout the Central Valley
-          and Northern California.
-        </p>
 
-        <!-- Central Valley -->
-        <div class="area-group">
-          <h2><i class="fa-solid fa-water"></i> Central Valley Counties</h2>
-          <ul class="areas-list">
-            <li>
-              <a href="/service-areas/central-valley/san-joaquin-county.html"
-                >San Joaquin County</a
-              >
-            </li>
-            <li>
-              <a href="/service-areas/central-valley/stanislaus-county.html"
-                >Stanislaus County</a
-              >
-            </li>
-            <li>
-              <a href="/service-areas/central-valley/merced-county.html"
-                >Merced County</a
-              >
-            </li>
-            <li>
-              <a href="/service-areas/central-valley/fresno-county.html"
-                >Fresno County</a
-              >
-            </li>
-            <li>
-              <a href="/service-areas/central-valley/madera-county.html"
-                >Madera County</a
-              >
-            </li>
-            <li>
-              <a href="/service-areas/central-valley/kings-county.html"
-                >Kings County</a
-              >
-            </li>
-            <li>
-              <a href="/service-areas/central-valley/tulare-county.html"
-                >Tulare County</a
-              >
-            </li>
-            <li>
-              <a href="/service-areas/central-valley/kern-county.html"
-                >Kern County</a
-              >
-            </li>
-          </ul>
-        </div>
-
-        <!-- Northern California -->
-        <div class="area-group">
-          <h2>
-            <i class="fa-solid fa-mountain-sun"></i> Northern California
-            Counties
-          </h2>
-          <ul class="areas-list">
-            <li>
-              <a
-                href="/service-areas/northern-california/sacramento-county.html"
-                >Sacramento County</a
-              >
-            </li>
-            <li>
-              <a href="/service-areas/northern-california/yolo-county.html"
-                >Yolo County</a
-              >
-            </li>
-            <li>
-              <a href="/service-areas/northern-california/placer-county.html"
-                >Placer County</a
-              >
-            </li>
-            <li>
-              <a href="/service-areas/northern-california/el-dorado-county.html"
-                >El Dorado County</a
-              >
-            </li>
-            <li>
-              <a href="/service-areas/northern-california/alameda-county.html"
-                >Alameda County</a
-              >
-            </li>
-            <li>
-              <a
-                href="/service-areas/northern-california/contra-costa-county.html"
-                >Contra Costa County</a
-              >
-            </li>
-            <li>
-              <a href="/service-areas/northern-california/san-mateo-county.html"
-                >San Mateo County</a
-              >
-            </li>
-            <li>
-              <a
-                href="/service-areas/northern-california/santa-clara-county.html"
-                >Santa Clara County</a
-              >
-            </li>
-            <li>
-              <a href="/service-areas/northern-california/solano-county.html"
-                >Solano County</a
-              >
-            </li>
-            <li>
-              <a href="/service-areas/northern-california/sonoma-county.html"
-                >Sonoma County</a
-              >
-            </li>
-            <li>
-              <a href="/service-areas/northern-california/napa-county.html"
-                >Napa County</a
-              >
-            </li>
-          </ul>
+    <section class="county-hero">
+      <div class="county-hero-content">
+        <p class="county-hero-eyebrow">Pacific Edge Pools</p>
+        <h1>Service Areas — <span>Central Valley &amp; Northern California</span></h1>
+        <p class="county-hero-sub">Professional pool remodeling, replastering, and resurfacing throughout California's Central Valley and Northern California CSLB #1144387.</p>
+        <div class="county-hero-actions">
+          <a href="/quote.html" class="hero-button">Get a Free Quote</a>
+          <a href="tel:2098312976" class="hero-phone" onclick="gtag('event', 'phone_call_click', {'event_category': 'Lead', 'event_label': 'Phone Call', 'value': 1})"><i class="fa-solid fa-phone"></i> (209) 831-2976</a>
         </div>
       </div>
     </section>
 
-    <!--CTA-->
-    <section class="cta-banner">
-      <h2>Ready to Transform Your Pool?</h2>
-      <a href="quote.html" class="cta-btn">Get a Free Quote</a>
+    <section class="county-intro">
+      <div class="county-container">
+        <p class="section-eyebrow">Where We Work</p>
+        <h2>Serving the Central Valley and Northern California</h2>
+        <p>Pacific Edge Pools is positioned at the center of our service area to efficiently serve both the Central Valley and Northern California. We've built a reputation for quality pool remodeling across a diverse range of markets, from Modesto and Stockton to Danville, Roseville, San Jose, and Napa.</p>
+        <p>Every market we serve has different water chemistry and climate conditions — from Silicon Valley's very hard 13 GPG water to Folsom Lake's near-pure 1.6 GPG supply, from 110°F desert heat in Ridgecrest to mild coastal fog in Foster City. We know the local conditions in every city we serve and use that knowledge in every finish recommendation we make.</p>
+        <div class="county-badge">
+          <i class="fa-solid fa-shield-halved"></i>
+          CSLB Lic. #1144387 — Licensed, Bonded &amp; Insured
+        </div>
+      </div>
+    </section>
+
+    <div class="county-container">
+
+      <div class="region-block">
+        <div class="region-header">
+          <div class="region-header-left">
+            <div class="region-icon"><i class="fa-solid fa-sun"></i></div>
+            <div>
+              <h2>Central Valley</h2>
+              <p>8 counties · 29 cities</p>
+            </div>
+          </div>
+        </div>
+        <div class="county-grid">
+          <a href="/service-areas/central-valley/stanislaus-county/" class="county-card">
+            <div class="county-card-top">
+              <span class="county-card-name">Stanislaus County</span>
+              <i class="fa-solid fa-chevron-right county-card-arrow"></i>
+            </div>
+            <span class="county-card-cities">Modesto, Turlock, Patterson, Oakdale, Riverbank, Hughson</span>
+            <span class="county-card-count"><i class="fa-solid fa-location-dot"></i> 6 cities</span>
+          </a>
+          <a href="/service-areas/central-valley/san-joaquin-county/" class="county-card">
+            <div class="county-card-top">
+              <span class="county-card-name">San Joaquin County</span>
+              <i class="fa-solid fa-chevron-right county-card-arrow"></i>
+            </div>
+            <span class="county-card-cities">Stockton, Tracy, Manteca, Lodi, Ripon, Escalon</span>
+            <span class="county-card-count"><i class="fa-solid fa-location-dot"></i> 6 cities</span>
+          </a>
+          <a href="/service-areas/central-valley/merced-county/" class="county-card">
+            <div class="county-card-top">
+              <span class="county-card-name">Merced County</span>
+              <i class="fa-solid fa-chevron-right county-card-arrow"></i>
+            </div>
+            <span class="county-card-cities">Merced, Atwater, Los Banos, Newman</span>
+            <span class="county-card-count"><i class="fa-solid fa-location-dot"></i> 4 cities</span>
+          </a>
+          <a href="/service-areas/central-valley/fresno-county/" class="county-card">
+            <div class="county-card-top">
+              <span class="county-card-name">Fresno County</span>
+              <i class="fa-solid fa-chevron-right county-card-arrow"></i>
+            </div>
+            <span class="county-card-cities">Fresno, Clovis, Reedley, Fowler</span>
+            <span class="county-card-count"><i class="fa-solid fa-location-dot"></i> 4 cities</span>
+          </a>
+          <a href="/service-areas/central-valley/tulare-county/" class="county-card">
+            <div class="county-card-top">
+              <span class="county-card-name">Tulare County</span>
+              <i class="fa-solid fa-chevron-right county-card-arrow"></i>
+            </div>
+            <span class="county-card-cities">Visalia, Tulare, Exeter</span>
+            <span class="county-card-count"><i class="fa-solid fa-location-dot"></i> 3 cities</span>
+          </a>
+          <a href="/service-areas/central-valley/kings-county/" class="county-card">
+            <div class="county-card-top">
+              <span class="county-card-name">Kings County</span>
+              <i class="fa-solid fa-chevron-right county-card-arrow"></i>
+            </div>
+            <span class="county-card-cities">Hanford, Lemoore</span>
+            <span class="county-card-count"><i class="fa-solid fa-location-dot"></i> 2 cities</span>
+          </a>
+          <a href="/service-areas/central-valley/kern-county/" class="county-card">
+            <div class="county-card-top">
+              <span class="county-card-name">Kern County</span>
+              <i class="fa-solid fa-chevron-right county-card-arrow"></i>
+            </div>
+            <span class="county-card-cities">Bakersfield, Ridgecrest, Lancaster</span>
+            <span class="county-card-count"><i class="fa-solid fa-location-dot"></i> 3 cities</span>
+          </a>
+          <a href="/service-areas/central-valley/madera-county/" class="county-card">
+            <div class="county-card-top">
+              <span class="county-card-name">Madera County</span>
+              <i class="fa-solid fa-chevron-right county-card-arrow"></i>
+            </div>
+            <span class="county-card-cities">Oakhurst</span>
+            <span class="county-card-count"><i class="fa-solid fa-location-dot"></i> 1 city</span>
+          </a>
+        </div>
+      </div>
+
+      <hr style="border:none;border-top:1px solid #e0eaf4;margin:20px 0;" />
+
+      <div class="region-block">
+        <div class="region-header">
+          <div class="region-header-left">
+            <div class="region-icon"><i class="fa-solid fa-bridge-water"></i></div>
+            <div>
+              <h2>Northern California</h2>
+              <p>10 counties · 39 cities</p>
+            </div>
+          </div>
+        </div>
+        <div class="county-grid">
+          <a href="/service-areas/northern-california/alameda-county/" class="county-card">
+            <div class="county-card-top">
+              <span class="county-card-name">Alameda County</span>
+              <i class="fa-solid fa-chevron-right county-card-arrow"></i>
+            </div>
+            <span class="county-card-cities">Fremont, Hayward, Livermore, Pleasanton</span>
+            <span class="county-card-count"><i class="fa-solid fa-location-dot"></i> 4 cities</span>
+          </a>
+          <a href="/service-areas/northern-california/contra-costa-county/" class="county-card">
+            <div class="county-card-top">
+              <span class="county-card-name">Contra Costa County</span>
+              <i class="fa-solid fa-chevron-right county-card-arrow"></i>
+            </div>
+            <span class="county-card-cities">Concord, Danville, Lafayette, Orinda, San Ramon, Walnut Creek</span>
+            <span class="county-card-count"><i class="fa-solid fa-location-dot"></i> 6 cities</span>
+          </a>
+          <a href="/service-areas/northern-california/el-dorado-county/" class="county-card">
+            <div class="county-card-top">
+              <span class="county-card-name">El Dorado County</span>
+              <i class="fa-solid fa-chevron-right county-card-arrow"></i>
+            </div>
+            <span class="county-card-cities">Cameron Park, El Dorado Hills, Placerville</span>
+            <span class="county-card-count"><i class="fa-solid fa-location-dot"></i> 3 cities</span>
+          </a>
+          <a href="/service-areas/northern-california/napa-county/" class="county-card">
+            <div class="county-card-top">
+              <span class="county-card-name">Napa County</span>
+              <i class="fa-solid fa-chevron-right county-card-arrow"></i>
+            </div>
+            <span class="county-card-cities">American Canyon, Calistoga, Napa</span>
+            <span class="county-card-count"><i class="fa-solid fa-location-dot"></i> 3 cities</span>
+          </a>
+          <a href="/service-areas/northern-california/placer-county/" class="county-card">
+            <div class="county-card-top">
+              <span class="county-card-name">Placer County</span>
+              <i class="fa-solid fa-chevron-right county-card-arrow"></i>
+            </div>
+            <span class="county-card-cities">Auburn, Folsom, Granite Bay, Lincoln, Rocklin, Roseville</span>
+            <span class="county-card-count"><i class="fa-solid fa-location-dot"></i> 6 cities</span>
+          </a>
+          <a href="/service-areas/northern-california/sacramento-county/" class="county-card">
+            <div class="county-card-top">
+              <span class="county-card-name">Sacramento County</span>
+              <i class="fa-solid fa-chevron-right county-card-arrow"></i>
+            </div>
+            <span class="county-card-cities">Citrus Heights, Elk Grove, Rancho Cordova, Sacramento</span>
+            <span class="county-card-count"><i class="fa-solid fa-location-dot"></i> 4 cities</span>
+          </a>
+          <a href="/service-areas/northern-california/san-mateo-county/" class="county-card">
+            <div class="county-card-top">
+              <span class="county-card-name">San Mateo County</span>
+              <i class="fa-solid fa-chevron-right county-card-arrow"></i>
+            </div>
+            <span class="county-card-cities">Foster City, Redwood City, San Carlos, San Mateo</span>
+            <span class="county-card-count"><i class="fa-solid fa-location-dot"></i> 4 cities</span>
+          </a>
+          <a href="/service-areas/northern-california/santa-clara-county/" class="county-card">
+            <div class="county-card-top">
+              <span class="county-card-name">Santa Clara County</span>
+              <i class="fa-solid fa-chevron-right county-card-arrow"></i>
+            </div>
+            <span class="county-card-cities">Cupertino, San Jose, Santa Clara, Sunnyvale</span>
+            <span class="county-card-count"><i class="fa-solid fa-location-dot"></i> 4 cities</span>
+          </a>
+          <a href="/service-areas/northern-california/solano-county/" class="county-card">
+            <div class="county-card-top">
+              <span class="county-card-name">Solano County</span>
+              <i class="fa-solid fa-chevron-right county-card-arrow"></i>
+            </div>
+            <span class="county-card-cities">Fairfield, Vacaville</span>
+            <span class="county-card-count"><i class="fa-solid fa-location-dot"></i> 2 cities</span>
+          </a>
+          <a href="/service-areas/northern-california/sonoma-county/" class="county-card">
+            <div class="county-card-top">
+              <span class="county-card-name">Sonoma County</span>
+              <i class="fa-solid fa-chevron-right county-card-arrow"></i>
+            </div>
+            <span class="county-card-cities">Petaluma, Santa Rosa</span>
+            <span class="county-card-count"><i class="fa-solid fa-location-dot"></i> 2 cities</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <section class="cta-banner" style="margin-top:60px;">
+      <h2>Don't See Your City?</h2>
+      <p>We travel throughout California — give us a call and we'll let you know if we can make it work.</p>
+      <a href="tel:2098312976" class="cta-btn" onclick="gtag('event', 'phone_call_click', {'event_category': 'Lead', 'event_label': 'Phone Call', 'value': 1})">Call (209) 831-2976</a>
     </section>
 
     <!-- FOOTER -->
-    <footer>
-      <p>© 2026 Pacific Edge Pools. All rights reserved.</p>
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">Pacific Edge Pools</div>
+          <p class="footer-tagline">Professional pool remodeling, replastering, and resurfacing serving the Central Valley and Northern California.</p>
+          <div class="footer-license-badge">
+            <i class="fa-solid fa-shield-halved"></i>
+            CSLB Lic. #1144387
+          </div>
+          <div class="footer-contact-info">
+            <a href="tel:2098312976" onclick="gtag('event', 'phone_call_click', {'event_category': 'Lead', 'event_label': 'Phone Call', 'value': 1})"><i class="fa-solid fa-phone"></i>(209) 831-2976</a>
+            <span><i class="fa-solid fa-location-dot"></i>Patterson, CA</span>
+            <span><i class="fa-solid fa-map"></i>Serving Central Valley & Northern California</span>
+          </div>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/pacificedgepools" target="_blank" rel="noopener" aria-label="Follow Pacific Edge Pools on Instagram">
+              <i class="fa-brands fa-instagram"></i>
+              @pacificedgepools
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services/remodeling.html">Pool Remodeling</a></li>
+            <li><a href="services/plastering.html">Pool Plastering</a></li>
+            <li><a href="services/resurfacing.html">Pool Resurfacing</a></li>
+            <li><a href="services/tile-coping.html">Tile & Coping</a></li>
+            <li><a href="services/spa.html">Spa Remodeling</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="service-areas.html">Service Areas</a></li>
+            <li><a href="quote.html">Get a Quote</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Areas We Serve</h4>
+          <ul>
+            <li><a href="service-areas/northern-california/alameda-county/livermore.html">Livermore, CA</a></li>
+            <li><a href="service-areas/northern-california/alameda-county/pleasanton.html">Pleasanton, CA</a></li>
+            <li><a href="service-areas/central-valley/san-joaquin-county/stockton.html">Stockton, CA</a></li>
+            <li><a href="service-areas/central-valley/san-joaquin-county/tracy.html">Tracy, CA</a></li>
+            <li><a href="service-areas.html">View All Areas →</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Pacific Edge Pools. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
     </footer>
 
-    <script>
-      const hamburger = document.getElementById('hamburger');
-      const navLinks = document.getElementById('nav-links');
 
-      hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        navLinks.classList.toggle('active');
-      });
+    <!-- LICENSE BADGE -->
+    <div class="license-badge">
+      <i class="fa-solid fa-shield-halved"></i>
+      <span>CSLB Lic. #1144387</span>
+    </div>
+
+    <!-- STICKY CALL BUTTON -->
+    <a href="tel:2098312976" onclick="gtag('event', 'phone_call_click', {'event_category': 'Lead', 'event_label': 'Phone Call', 'value': 1})" class="sticky-call" aria-label="Call Pacific Edge Pools">
+      <i class="fa-solid fa-phone"></i>
+      <span class="call-label">(209) 831-2976</span>
+    </a>
+
+    <script>
+      (() => {
+        const navbar = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => {
+          navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+        hamburger.addEventListener('click', () => {
+          hamburger.classList.toggle('active');
+          navLinks.classList.toggle('active');
+        });
+        document.querySelectorAll('.faq-item h3').forEach(h3 => {
+          h3.addEventListener('click', () => {
+            h3.parentElement.classList.toggle('open');
+          });
+        });
+      })();
     </script>
+
   </body>
 </html>
