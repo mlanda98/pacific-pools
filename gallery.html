@@ -21,13 +21,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/styles/styles.css" />
 
     <style>
-      /* ─── RESETS ─── */
       *,
       *::before,
       *::after {
@@ -50,7 +49,183 @@
         color: inherit;
       }
 
-      /* ─── HERO ─── */
+      /* ── NAVBAR ── */
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+      }
+      .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 18px 32px;
+        background: transparent;
+        transition:
+          background 0.3s,
+          box-shadow 0.3s;
+        position: relative;
+      }
+      .navbar.scrolled {
+        background: #fff;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+      }
+      .logo-link {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .logo-img {
+        height: 40px;
+        width: auto;
+      }
+      .logo-text {
+        font-size: 18px;
+        font-weight: 800;
+        color: #fff;
+        letter-spacing: -0.3px;
+        transition: color 0.3s;
+      }
+      .navbar.scrolled .logo-text {
+        color: #003b6f;
+      }
+
+      .nav-links {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+      .nav-links li a {
+        font-size: 14px;
+        font-weight: 700;
+        color: rgba(255, 255, 255, 0.88);
+        padding: 8px 14px;
+        border-radius: 6px;
+        transition: color 0.2s;
+      }
+      .navbar.scrolled .nav-links li a {
+        color: #003b6f;
+      }
+      .nav-links li a:hover {
+        color: #0077b6 !important;
+      }
+      .nav-links li a.active-nav {
+        color: #4fc3f7 !important;
+      }
+      .navbar.scrolled .nav-links li a.active-nav {
+        color: #0077b6 !important;
+      }
+      .nav-links .quote-btn {
+        background: #0077b6 !important;
+        color: #fff !important;
+        padding: 9px 20px;
+        border-radius: 8px;
+      }
+      .nav-links .quote-btn:hover {
+        background: #003b6f !important;
+      }
+
+      /* Hamburger */
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        cursor: pointer;
+        padding: 8px;
+        z-index: 1100;
+        background: none;
+        border: none;
+      }
+      .hamburger span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background: #fff;
+        border-radius: 2px;
+        transition: all 0.3s;
+      }
+      .navbar.scrolled .hamburger span {
+        background: #003b6f;
+      }
+      /* animate to X */
+      .hamburger.open span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+      }
+      .hamburger.open span:nth-child(2) {
+        opacity: 0;
+      }
+      .hamburger.open span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+      }
+
+      /* Mobile nav drawer */
+      .nav-drawer {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #fff;
+        z-index: 1050;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 80px 32px 40px;
+        gap: 4px;
+      }
+      .nav-drawer.open {
+        display: flex;
+      }
+      .nav-drawer ul {
+        width: 100%;
+        max-width: 360px;
+        list-style: none;
+      }
+      .nav-drawer li {
+        list-style: none;
+      }
+      .nav-drawer li a {
+        display: block;
+        font-size: 22px;
+        font-weight: 800;
+        color: #003b6f;
+        padding: 16px 0;
+        border-bottom: 1px solid #eef3f8;
+        text-align: center;
+        transition: color 0.2s;
+      }
+      .nav-drawer li a:hover {
+        color: #0077b6;
+      }
+      .nav-drawer .quote-btn {
+        margin-top: 16px;
+        background: #0077b6 !important;
+        color: #fff !important;
+        padding: 16px 28px;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 18px !important;
+        border: none !important;
+        display: block;
+      }
+      .drawer-close {
+        position: absolute;
+        top: 20px;
+        right: 24px;
+        background: none;
+        border: none;
+        font-size: 28px;
+        color: #003b6f;
+        cursor: pointer;
+        line-height: 1;
+      }
+
+      /* ── HERO ── */
       .gallery-hero {
         background: linear-gradient(
           135deg,
@@ -122,7 +297,7 @@
         line-height: 1.65;
       }
 
-      /* ─── FILTERS ─── */
+      /* ── FILTERS ── */
       .gallery-filters {
         background: #f5f8fc;
         padding: 36px 24px 0;
@@ -158,7 +333,6 @@
         color: #fff;
       }
 
-      /* ─── RESULTS BAR ─── */
       .results-bar {
         background: #f5f8fc;
         padding: 14px 24px 32px;
@@ -173,7 +347,7 @@
         color: #0077b6;
       }
 
-      /* ─── GALLERY ─── */
+      /* ── GALLERY GRID ── */
       .gallery-section {
         background: #f5f8fc;
         padding: 0 40px 100px;
@@ -186,58 +360,59 @@
         gap: 32px;
       }
 
-      /* ─── CARD ─── */
+      /* ── PROJECT CARD ── */
       .project-card {
         background: #fff;
         border-radius: 16px;
         overflow: hidden;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-        transition:
-          transform 0.3s,
-          box-shadow 0.3s;
         cursor: pointer;
         display: flex;
         flex-direction: column;
+        transition:
+          transform 0.3s,
+          box-shadow 0.3s;
       }
       .project-card:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 18px 44px rgba(0, 59, 111, 0.16);
+        transform: translateY(-4px);
+        box-shadow: 0 16px 40px rgba(0, 59, 111, 0.14);
       }
       .project-card.hidden {
         display: none;
       }
 
-      .card-images {
+      /* ── CARD CAROUSEL ── */
+      .card-carousel {
         position: relative;
         width: 100%;
-        aspect-ratio: 4/3;
+        aspect-ratio: 3/4;
         overflow: hidden;
-        background: #dce8f5;
+        background: #111;
         flex-shrink: 0;
+        touch-action: pan-y;
       }
-      .card-img-before,
-      .card-img-after {
-        position: absolute;
-        inset: 0;
+      .card-slides {
+        display: flex;
         width: 100%;
         height: 100%;
-        object-fit: cover;
-        transition: opacity 0.4s ease;
+        transition: transform 0.45s ease;
       }
-      .card-img-before {
-        opacity: 1;
+      .card-slide {
+        flex: 0 0 100%;
+        width: 100%;
+        height: 100%;
+        position: relative;
       }
-      .card-img-after {
-        opacity: 0;
-      }
-      .project-card:hover .card-img-before {
-        opacity: 0;
-      }
-      .project-card:hover .card-img-after {
-        opacity: 1;
+      .card-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+        background: #111;
       }
 
-      .card-ba-label {
+      /* Slide label (Before / After) */
+      .slide-label {
         position: absolute;
         top: 12px;
         left: 12px;
@@ -248,58 +423,99 @@
         letter-spacing: 1px;
         text-transform: uppercase;
         pointer-events: none;
-        transition: background 0.4s;
       }
-      .project-card:not(:hover) .card-ba-label {
+      .slide-label.before {
         background: rgba(210, 40, 40, 0.88);
         color: #fff;
       }
-      .project-card:hover .card-ba-label {
+      .slide-label.after {
         background: rgba(0, 119, 182, 0.92);
         color: #fff;
       }
 
-      .card-hover-hint {
+      /* Dot indicators */
+      .card-dots {
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        gap: 6px;
+        pointer-events: none;
+      }
+      .card-dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.5);
+        transition:
+          background 0.25s,
+          transform 0.25s;
+      }
+      .card-dot.active {
+        background: #fff;
+        transform: scale(1.3);
+      }
+
+      /* Prev / Next arrows on card */
+      .card-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 5;
+        background: rgba(0, 25, 55, 0.7);
+        color: #fff;
+        border: none;
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        font-size: 13px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition:
+          background 0.2s,
+          opacity 0.2s;
+        opacity: 0;
+      }
+      .card-carousel:hover .card-arrow {
+        opacity: 1;
+      }
+      .card-arrow:hover {
+        background: rgba(0, 25, 55, 0.95);
+      }
+      .card-arrow:disabled {
+        opacity: 0.2 !important;
+        cursor: default;
+      }
+      .card-arrow.prev {
+        left: 10px;
+      }
+      .card-arrow.next {
+        right: 10px;
+      }
+
+      /* Swipe hint badge */
+      .swipe-hint {
         position: absolute;
         bottom: 10px;
         right: 10px;
-        background: rgba(0, 25, 55, 0.8);
+        background: rgba(0, 25, 55, 0.78);
         color: rgba(255, 255, 255, 0.92);
         font-size: 11px;
         font-weight: 700;
-        letter-spacing: 0.8px;
-        text-transform: uppercase;
-        padding: 5px 11px;
+        letter-spacing: 0.6px;
+        padding: 5px 10px;
         border-radius: 20px;
         pointer-events: none;
-        opacity: 1;
-        transition: opacity 0.3s;
-      }
-      .project-card:hover .card-hover-hint {
-        opacity: 0;
-      }
-
-      .card-click-hint {
-        position: absolute;
-        bottom: 10px;
-        left: 10px;
-        background: rgba(0, 119, 182, 0.9);
-        color: #fff;
-        font-size: 11px;
-        font-weight: 700;
-        padding: 5px 11px;
-        border-radius: 20px;
-        pointer-events: none;
-        opacity: 0;
-        transition: opacity 0.3s;
         display: flex;
         align-items: center;
         gap: 5px;
       }
-      .project-card:hover .card-click-hint {
-        opacity: 1;
-      }
 
+      /* Multi-photo badge */
       .card-photo-badge {
         position: absolute;
         top: 12px;
@@ -316,7 +532,7 @@
         pointer-events: none;
       }
 
-      /* Card body */
+      /* ── CARD BODY ── */
       .card-body {
         padding: 26px 26px 28px;
         flex: 1;
@@ -377,7 +593,28 @@
         font-size: 12px;
       }
 
-      /* ─── EMPTY STATE ─── */
+      /* Click CTA on card */
+      .card-cta-bar {
+        padding: 0 26px 22px;
+        margin-top: -6px;
+      }
+      .card-cta-btn {
+        display: block;
+        width: 100%;
+        text-align: center;
+        background: #0077b6;
+        color: #fff;
+        padding: 11px 20px;
+        border-radius: 8px;
+        font-size: 13px;
+        font-weight: 700;
+        transition: background 0.2s;
+      }
+      .card-cta-btn:hover {
+        background: #003b6f;
+      }
+
+      /* ── EMPTY ── */
       .gallery-empty {
         display: none;
         text-align: center;
@@ -397,7 +634,7 @@
         font-size: 16px;
       }
 
-      /* ─── LIGHTBOX ─── */
+      /* ── LIGHTBOX ── */
       .lightbox-overlay {
         position: fixed;
         inset: 0;
@@ -463,8 +700,7 @@
         overflow: hidden;
         background: #dce8f5;
       }
-      .lb-before-carousel,
-      .lb-after-carousel {
+      .lb-panel {
         position: relative;
         width: 100%;
         height: 100%;
@@ -515,7 +751,7 @@
         opacity: 0.25;
         cursor: default;
       }
-      .lb-dots {
+      .lb-dots-row {
         position: absolute;
         bottom: 38px;
         left: 0;
@@ -616,7 +852,7 @@
         background: #003b6f;
       }
 
-      /* ─── CTA BANNER ─── */
+      /* ── CTA BANNER ── */
       .cta-banner {
         background: linear-gradient(135deg, #003b6f, #0077b6);
         padding: 64px 24px;
@@ -642,102 +878,7 @@
         background: #e8f4fb;
       }
 
-      /* ─── NAVBAR ─── */
-      header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 1000;
-      }
-      .navbar {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 18px 32px;
-        background: transparent;
-        transition:
-          background 0.3s,
-          box-shadow 0.3s;
-      }
-      .navbar.scrolled {
-        background: #fff;
-        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-      }
-      .logo-link {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-      }
-      .logo-img {
-        height: 40px;
-        width: auto;
-      }
-      .logo-text {
-        font-size: 18px;
-        font-weight: 800;
-        color: #fff;
-        letter-spacing: -0.3px;
-        transition: color 0.3s;
-      }
-      .navbar.scrolled .logo-text {
-        color: #003b6f;
-      }
-      .nav-links {
-        list-style: none;
-        display: flex;
-        align-items: center;
-        gap: 4px;
-      }
-      .nav-links li a {
-        font-size: 14px;
-        font-weight: 700;
-        color: rgba(255, 255, 255, 0.88);
-        padding: 8px 14px;
-        border-radius: 6px;
-        transition: color 0.2s;
-      }
-      .navbar.scrolled .nav-links li a {
-        color: #003b6f;
-      }
-      .nav-links li a:hover {
-        color: #0077b6 !important;
-      }
-      .nav-links li a.active-nav {
-        color: #4fc3f7 !important;
-      }
-      .navbar.scrolled .nav-links li a.active-nav {
-        color: #0077b6 !important;
-      }
-      .nav-links .quote-btn {
-        background: #0077b6 !important;
-        color: #fff !important;
-        padding: 9px 20px;
-        border-radius: 8px;
-      }
-      .nav-links .quote-btn:hover {
-        background: #003b6f !important;
-      }
-      .hamburger {
-        display: none;
-        flex-direction: column;
-        gap: 5px;
-        cursor: pointer;
-        padding: 4px;
-      }
-      .hamburger span {
-        display: block;
-        width: 24px;
-        height: 2px;
-        background: #fff;
-        border-radius: 2px;
-        transition: all 0.3s;
-      }
-      .navbar.scrolled .hamburger span {
-        background: #003b6f;
-      }
-
-      /* ─── FOOTER ─── */
+      /* ── FOOTER ── */
       .site-footer {
         background: #001f3f;
         padding: 60px 40px 0;
@@ -845,7 +986,7 @@
         color: rgba(255, 255, 255, 0.6);
       }
 
-      /* ─── FIXED BADGES ─── */
+      /* ── FIXED ELEMENTS ── */
       .license-badge {
         position: fixed;
         bottom: 80px;
@@ -886,7 +1027,7 @@
         transform: translateY(-2px);
       }
 
-      /* ─── RESPONSIVE ─── */
+      /* ── RESPONSIVE ── */
       @media (max-width: 960px) {
         .gallery-grid {
           grid-template-columns: repeat(2, 1fr);
@@ -897,6 +1038,12 @@
         }
         .gallery-section {
           padding: 0 24px 80px;
+        }
+        .nav-links {
+          display: none;
+        }
+        .hamburger {
+          display: flex;
         }
       }
       @media (max-width: 640px) {
@@ -920,42 +1067,13 @@
         .navbar {
           padding: 14px 20px;
         }
-        .nav-links {
-          display: none;
-        }
-        .hamburger {
-          display: flex;
-        }
-        .nav-links.active {
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-          position: absolute;
-          top: 100%;
-          left: 0;
-          right: 0;
-          background: #fff;
-          padding: 20px 24px;
-          gap: 4px;
-          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-        }
-        .nav-links.active li a {
-          color: #003b6f !important;
-        }
-        .nav-links.active .quote-btn{
-            color: white !important;
-          }
-        
-
-
-
       }
     </style>
   </head>
   <body>
     <!-- NAVBAR -->
     <header>
-      <nav class="navbar">
+      <nav class="navbar" id="navbar">
         <a href="index.html" class="logo-link">
           <img
             src="/images/logo.png"
@@ -964,18 +1082,32 @@
           />
           <span class="logo-text">Pacific Edge Pools</span>
         </a>
-        <div class="hamburger" id="hamburger">
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
           <span></span><span></span><span></span>
-        </div>
+        </button>
         <ul class="nav-links" id="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About Us</a></li>
           <li><a href="service-areas.html">Services</a></li>
           <li><a href="gallery.html" class="active-nav">Gallery</a></li>
-          <li><a href="quote.html" class="quote-btn">Get a Quote</a></li>
+          <li><a class="quote-btn" href="quote.html">Get a Quote</a></li>
         </ul>
       </nav>
     </header>
+
+    <!-- MOBILE DRAWER -->
+    <nav class="nav-drawer" id="navDrawer">
+      <button class="drawer-close" id="drawerClose" aria-label="Close menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="service-areas.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a class="quote-btn" href="quote.html">Get a Quote</a></li>
+      </ul>
+    </nav>
 
     <!-- HERO -->
     <section class="gallery-hero">
@@ -983,8 +1115,8 @@
         <p class="gallery-eyebrow">Our Portfolio</p>
         <h1>Pool Transformations <span>We're Proud Of</span></h1>
         <p>
-          Real before & after results from real homeowners across the Central
-          Valley and Northern California. Hover any photo to see the after.
+          Real before & after photos from homeowners across the Central Valley
+          and Northern California. Swipe or tap the arrows to see every photo.
         </p>
       </div>
     </section>
@@ -1004,7 +1136,6 @@
         <button class="filter-btn" data-filter="spa">Spa</button>
       </div>
     </div>
-
     <div class="results-bar">
       <p class="results-count">
         <span id="visibleCount">3</span> projects shown
@@ -1024,23 +1155,30 @@
           data-desc="Cracked plaster, faded tile, and algae-stained walls — stripped down and rebuilt fresh with new white plaster and updated waterline tile."
           data-before="images/before.jpg"
           data-after="images/after.jpg"
-          onclick="openLightbox(this)"
         >
-          <div class="card-images">
-            <img
-              class="card-img-before"
-              src="images/before.jpg"
-              alt="Pool before remodel Tracy CA"
-            />
-            <img
-              class="card-img-after"
-              src="images/after.jpg"
-              alt="Pool after remodel Tracy CA"
-            />
-            <div class="card-ba-label">Before → After</div>
-            <div class="card-hover-hint">Hover to see after</div>
-            <div class="card-click-hint">
-              <i class="fa-solid fa-expand"></i> Click for full view
+          <div class="card-carousel" data-autoplay="true">
+            <div class="card-slides">
+              <div class="card-slide">
+                <img
+                  src="images/before.jpg"
+                  alt="Pool before remodel Tracy CA"
+                />
+                <div class="slide-label before">Before</div>
+              </div>
+              <div class="card-slide">
+                <img src="images/after.jpg" alt="Pool after remodel Tracy CA" />
+                <div class="slide-label after">After</div>
+              </div>
+            </div>
+            <button class="card-arrow prev" aria-label="Previous photo">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button class="card-arrow next" aria-label="Next photo">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+            <div class="card-dots"></div>
+            <div class="swipe-hint">
+              <i class="fa-solid fa-hand-pointer"></i> Swipe
             </div>
           </div>
           <div class="card-body">
@@ -1065,6 +1203,11 @@
               </div>
             </div>
           </div>
+          <div class="card-cta-bar">
+            <a href="quote.html" class="card-cta-btn"
+              >Get a Quote for Your Pool</a
+            >
+          </div>
         </div>
 
         <!-- MODESTO -->
@@ -1074,30 +1217,54 @@
           data-title="Pool & Spa Replaster"
           data-location="Modesto, CA"
           data-duration="5 days"
-          data-desc="Severely failed plaster on both the pool and spa — chipped out down to shell and replastered with fresh white plaster. The spa got new blue diamond tile accents to match the existing waterline tile."
+          data-desc="Severely failed plaster on both the pool and spa — chipped out down to shell and replastered with fresh white plaster. Includes decorative tile trimming on the pool seats and ledges. The spa got new blue diamond tile accents to match the existing waterline tile."
           data-before="images/modesto.jpg"
           data-before2="images/modestobefore.jpg"
           data-after="images/modestoafter.jpg, images/modestoafter2.jpg"
-          onclick="openLightbox(this)"
         >
-          <div class="card-images">
-            <img
-              class="card-img-before"
-              src="images/modesto.jpg"
-              alt="Pool before replastering Modesto CA"
-            />
-            <img
-              class="card-img-after"
-              src="images/modestoafter.jpg"
-              alt="Pool after replastering Modesto CA"
-            />
-            <div class="card-ba-label">Before → After</div>
-            <div class="card-hover-hint">Hover to see after</div>
-            <div class="card-click-hint">
-              <i class="fa-solid fa-expand"></i> Click for full view
+          <div class="card-carousel" data-autoplay="true">
+            <div class="card-slides">
+              <div class="card-slide">
+                <img
+                  src="images/modesto.jpg"
+                  alt="Pool before replastering Modesto CA"
+                />
+                <div class="slide-label before">Before — Pool</div>
+              </div>
+              <div class="card-slide">
+                <img
+                  src="images/modestobefore.jpg"
+                  alt="Spa before replastering Modesto CA"
+                />
+                <div class="slide-label before">Before — Spa</div>
+              </div>
+              <div class="card-slide">
+                <img
+                  src="images/modestoafter.jpg"
+                  alt="Pool after replastering Modesto CA"
+                />
+                <div class="slide-label after">After — Pool</div>
+              </div>
+              <div class="card-slide">
+                <img
+                  src="images/modestoafter2.jpg"
+                  alt="Spa after replastering Modesto CA"
+                />
+                <div class="slide-label after">After — Spa</div>
+              </div>
             </div>
+            <button class="card-arrow prev" aria-label="Previous photo">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button class="card-arrow next" aria-label="Next photo">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+            <div class="card-dots"></div>
             <div class="card-photo-badge">
               <i class="fa-solid fa-images"></i> 4 photos
+            </div>
+            <div class="swipe-hint">
+              <i class="fa-solid fa-hand-pointer"></i> Swipe
             </div>
           </div>
           <div class="card-body">
@@ -1111,7 +1278,9 @@
             <h3>Pool & Spa White Plaster Replaster</h3>
             <p>
               Failed plaster chipped out and fully replastered — pool and spa
-              both restored with fresh white plaster.
+              restored with fresh white plaster, decorative tile trimming on
+              seats and ledges, and blue diamond tile accents throughout the
+              spa.
             </p>
             <div class="card-meta">
               <div class="card-meta-item">
@@ -1121,6 +1290,11 @@
                 <i class="fa-solid fa-wrench"></i> Replaster + Spa
               </div>
             </div>
+          </div>
+          <div class="card-cta-bar">
+            <a href="quote.html" class="card-cta-btn"
+              >Get a Quote for Your Pool</a
+            >
           </div>
         </div>
 
@@ -1135,26 +1309,43 @@
           data-before="images/lathrop2.jpg"
           data-before2="images/lathtop.jpg"
           data-after="images/lathropafter.jpg"
-          onclick="openLightbox(this)"
         >
-          <div class="card-images">
-            <img
-              class="card-img-before"
-              src="images/lathrop2.jpg"
-              alt="Pool before replastering Lathrop CA"
-            />
-            <img
-              class="card-img-after"
-              src="images/lathropafter.jpg"
-              alt="Pool after replastering Lathrop CA"
-            />
-            <div class="card-ba-label">Before → After</div>
-            <div class="card-hover-hint">Hover to see after</div>
-            <div class="card-click-hint">
-              <i class="fa-solid fa-expand"></i> Click for full view
+          <div class="card-carousel" data-autoplay="true">
+            <div class="card-slides">
+              <div class="card-slide">
+                <img
+                  src="images/lathrop2.jpg"
+                  alt="Pool before replastering Lathrop CA"
+                />
+                <div class="slide-label before">Before — Pool</div>
+              </div>
+              <div class="card-slide">
+                <img
+                  src="images/lathtop.jpg"
+                  alt="Spa before replastering Lathrop CA"
+                />
+                <div class="slide-label before">Before — Spa</div>
+              </div>
+              <div class="card-slide">
+                <img
+                  src="images/lathropafter.jpg"
+                  alt="Pool & spa after replastering Lathrop CA"
+                />
+                <div class="slide-label after">After</div>
+              </div>
             </div>
+            <button class="card-arrow prev" aria-label="Previous photo">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button class="card-arrow next" aria-label="Next photo">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+            <div class="card-dots"></div>
             <div class="card-photo-badge">
               <i class="fa-solid fa-images"></i> 3 photos
+            </div>
+            <div class="swipe-hint">
+              <i class="fa-solid fa-hand-pointer"></i> Swipe
             </div>
           </div>
           <div class="card-body">
@@ -1179,6 +1370,11 @@
               </div>
             </div>
           </div>
+          <div class="card-cta-bar">
+            <a href="quote.html" class="card-cta-btn"
+              >Get a Quote for Your Pool</a
+            >
+          </div>
         </div>
       </div>
       <div class="gallery-empty" id="galleryEmpty">
@@ -1199,7 +1395,7 @@
         </button>
         <div class="lightbox-images">
           <div class="lb-img-wrap">
-            <div class="lb-before-carousel" id="lbBeforeCarousel"></div>
+            <div class="lb-panel" id="lbBeforePanel"></div>
             <button
               class="lb-carousel-btn prev"
               id="lbBeforePrev"
@@ -1214,13 +1410,13 @@
             >
               <i class="fa-solid fa-chevron-right"></i>
             </button>
-            <div class="lb-dots" id="lbBeforeDots"></div>
+            <div class="lb-dots-row" id="lbBeforeDots"></div>
             <div class="lb-label before">
               Before <span class="lb-counter" id="lbBeforeCounter"></span>
             </div>
           </div>
           <div class="lb-img-wrap">
-            <div class="lb-after-carousel" id="lbAfterCarousel"></div>
+            <div class="lb-panel" id="lbAfterPanel"></div>
             <button
               class="lb-carousel-btn prev"
               id="lbAfterPrev"
@@ -1235,7 +1431,7 @@
             >
               <i class="fa-solid fa-chevron-right"></i>
             </button>
-            <div class="lb-dots" id="lbAfterDots"></div>
+            <div class="lb-dots-row" id="lbAfterDots"></div>
             <div class="lb-label after">
               After <span class="lb-counter" id="lbAfterCounter"></span>
             </div>
@@ -1335,13 +1531,13 @@
               >
             </li>
             <li>
-              <a href="service-areas/central-valley/san-joaquin-county/tracy.html"
-                >Tracy, CA</a
+              <a href="service-areas/central-valley/san-joaquin/stockton.html"
+                >Stockton, CA</a
               >
             </li>
             <li>
-              <a href="service-areas/central-valley/san-joaquin-county/stockton.html"
-                >Stockton, CA</a
+              <a href="service-areas/central-valley/san-joaquin/tracy.html"
+                >Tracy, CA</a
               >
             </li>
             <li><a href="service-areas.html">View All Areas →</a></li>
@@ -1365,20 +1561,30 @@
     >
 
     <script>
-      // Navbar scroll
-      const navbar = document.querySelector(".navbar");
-      window.addEventListener("scroll", () => {
-        navbar.classList.toggle("scrolled", window.scrollY > 50);
-      });
+      // ── NAVBAR ──────────────────────────────────────────────
+      const navbar = document.getElementById("navbar");
+      window.addEventListener("scroll", () =>
+        navbar.classList.toggle("scrolled", window.scrollY > 50),
+      );
 
       const hamburger = document.getElementById("hamburger");
-      const navLinks = document.getElementById("nav-links");
+      const navDrawer = document.getElementById("navDrawer");
+      const drawerClose = document.getElementById("drawerClose");
+
       hamburger.addEventListener("click", () => {
-        hamburger.classList.toggle("active");
-        navLinks.classList.toggle("active");
+        hamburger.classList.toggle("open");
+        navDrawer.classList.toggle("open");
+        document.body.style.overflow = navDrawer.classList.contains("open")
+          ? "hidden"
+          : "";
+      });
+      drawerClose.addEventListener("click", () => {
+        hamburger.classList.remove("open");
+        navDrawer.classList.remove("open");
+        document.body.style.overflow = "";
       });
 
-      // Filters
+      // ── FILTERS ──────────────────────────────────────────────
       document.querySelectorAll(".filter-btn").forEach((btn) => {
         btn.addEventListener("click", () => {
           document
@@ -1401,16 +1607,106 @@
         });
       });
 
-      // Lightbox
+      // ── CARD CAROUSELS ───────────────────────────────────────
+      document.querySelectorAll(".card-carousel").forEach((carousel) => {
+        const slidesWrap = carousel.querySelector(".card-slides");
+        const slides = carousel.querySelectorAll(".card-slide");
+        const dotsWrap = carousel.querySelector(".card-dots");
+        const prevBtn = carousel.querySelector(".card-arrow.prev");
+        const nextBtn = carousel.querySelector(".card-arrow.next");
+        const total = slides.length;
+        let idx = 0;
+        let autoTimer = null;
+        let touchStartX = 0;
+
+        // Build dots
+        slides.forEach((_, i) => {
+          const d = document.createElement("div");
+          d.className = "card-dot" + (i === 0 ? " active" : "");
+          dotsWrap.appendChild(d);
+        });
+        const dots = dotsWrap.querySelectorAll(".card-dot");
+
+        function goTo(n) {
+          idx = (n + total) % total;
+          slidesWrap.style.transform = `translateX(-${idx * 100}%)`;
+          dots.forEach((d, i) => d.classList.toggle("active", i === idx));
+          if (prevBtn) prevBtn.disabled = idx === 0;
+          if (nextBtn) nextBtn.disabled = idx === total - 1;
+        }
+
+        // initialise button state
+        goTo(0);
+
+        function startAuto() {
+          stopAuto();
+          autoTimer = setInterval(() => goTo(idx + 1), 3000);
+        }
+        function stopAuto() {
+          if (autoTimer) clearInterval(autoTimer);
+        }
+
+        startAuto();
+
+        // Arrow button clicks
+        if (prevBtn)
+          prevBtn.addEventListener("click", () => {
+            stopAuto();
+            goTo(idx - 1);
+            startAuto();
+          });
+        if (nextBtn)
+          nextBtn.addEventListener("click", () => {
+            stopAuto();
+            goTo(idx + 1);
+            startAuto();
+          });
+
+        // Pause autoplay on hover
+        carousel.addEventListener("mouseenter", stopAuto);
+        carousel.addEventListener("mouseleave", startAuto);
+
+        // Touch swipe
+        carousel.addEventListener(
+          "touchstart",
+          (e) => {
+            touchStartX = e.touches[0].clientX;
+            stopAuto();
+          },
+          { passive: true },
+        );
+
+        carousel.addEventListener(
+          "touchend",
+          (e) => {
+            const diff = touchStartX - e.changedTouches[0].clientX;
+            if (Math.abs(diff) > 40) goTo(diff > 0 ? idx + 1 : idx - 1);
+            startAuto();
+          },
+          { passive: true },
+        );
+
+        // Hide swipe hint after first touch
+        const hint = carousel.querySelector(".swipe-hint");
+        carousel.addEventListener(
+          "touchstart",
+          () => {
+            if (hint) hint.style.display = "none";
+          },
+          { once: true, passive: true },
+        );
+      });
+
+      // ── LIGHTBOX ─────────────────────────────────────────────
       const lightbox = document.getElementById("lightbox");
       let bSlides = [],
         bIdx = 0,
         aSlides = [],
         aIdx = 0;
 
-      function buildCarousel(containerId, srcs) {
-        const el = document.getElementById(containerId);
-        el.innerHTML = "";
+      function buildLbPanel(panelId, srcs) {
+        const panel = document.getElementById(panelId);
+        panel.innerHTML = "";
         return srcs.map((src, i) => {
           const div = document.createElement("div");
           div.className = "lb-slide" + (i === 0 ? " active" : "");
@@ -1418,12 +1714,12 @@
           img.src = src;
           img.alt = "";
           div.appendChild(img);
-          el.appendChild(div);
+          panel.appendChild(div);
           return div;
         });
       }
 
-      function syncCarousel(slides, dotsId, counterId, prevId, nextId, idx) {
+      function syncLb(slides, dotsId, counterId, prevId, nextId, idx) {
         const total = slides.length,
           multi = total > 1;
         slides.forEach((s, i) => s.classList.toggle("active", i === idx));
@@ -1448,6 +1744,16 @@
         }
       }
 
+      // Open lightbox when card body/CTA is clicked (not the carousel itself)
+      document.querySelectorAll(".project-card").forEach((card) => {
+        card
+          .querySelector(".card-body")
+          .addEventListener("click", () => openLightbox(card));
+        card
+          .querySelector(".card-cta-bar")
+          .addEventListener("click", (e) => e.stopPropagation());
+      });
+
       function openLightbox(card) {
         document.getElementById("lbTitle").textContent =
           card.dataset.title || "";
@@ -1460,9 +1766,9 @@
         const bSrcs = [card.dataset.before, card.dataset.before2].filter(
           Boolean,
         );
-        bSlides = buildCarousel("lbBeforeCarousel", bSrcs);
+        bSlides = buildLbPanel("lbBeforePanel", bSrcs);
         bIdx = 0;
-        syncCarousel(
+        syncLb(
           bSlides,
           "lbBeforeDots",
           "lbBeforeCounter",
@@ -1475,9 +1781,9 @@
           .split(",")
           .map((s) => s.trim())
           .filter(Boolean);
-        aSlides = buildCarousel("lbAfterCarousel", aSrcs);
+        aSlides = buildLbPanel("lbAfterPanel", aSrcs);
         aIdx = 0;
-        syncCarousel(
+        syncLb(
           aSlides,
           "lbAfterDots",
           "lbAfterCounter",
@@ -1492,7 +1798,7 @@
 
       function lbBeforeSlide(d) {
         bIdx = Math.max(0, Math.min(bSlides.length - 1, bIdx + d));
-        syncCarousel(
+        syncLb(
           bSlides,
           "lbBeforeDots",
           "lbBeforeCounter",
@@ -1503,7 +1809,7 @@
       }
       function lbAfterSlide(d) {
         aIdx = Math.max(0, Math.min(aSlides.length - 1, aIdx + d));
-        syncCarousel(
+        syncLb(
           aSlides,
           "lbAfterDots",
           "lbAfterCounter",
